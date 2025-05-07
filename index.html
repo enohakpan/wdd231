@@ -1,78 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Enoh Uwem Akpan's Personal Website" />
-    <meta name="author" content="Enoh Uwem Akpan" />
-    <title>Enoh Uwem Akpan | Home</title>
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <script src="scripts/script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Enoh Uwem Akpan's Personal Website" />
+  <meta name="author" content="Enoh Uwem Akpan" />
+  <title>Enoh Uwem Akpan | Home</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="icon" href="favicon.ico">
+  <script src="scripts/script.js" defer></script>
 </head>
-
 <body>
-    <header>
-        <img src="images/ENOH.jpg" alt="Enoh's Photo" width="80" height="80" />
-        <span>Enoh Uwem Akpan</span>
-    </header>
+  <header>
+    <img src="images/ENOH.jpg" alt="Enoh's Photo" width="80" height="80" />
+    <span>Enoh Uwem Akpan</span>
+  </header>
 
-    <nav>
+  <nav>
+    <ul>
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="chamber/index.html">Chamber</a></li>
+      <li><a href="final/index.html">Final</a></li>
+      <li><a href="https://github.com/yourusername">GitHub Profile</a></li>
+      <li><a href="https://linkedin.com/in/yourusername">LinkedIn</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+
+    <section class="cards">
+      <div class="card">
+        <h2>Course Work</h2>
         <ul>
-            <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="chamber/index.html">Chamber</a></li>
-            <li><a href="final/index.html">Final</a></li>
-            <li><a href="https://github.com/yourusername">GitHub Profile</a></li>
-            <li><a href="https://linkedin.com/in/yourusername">LinkedIn</a></li>
+          <li>WDD 231</li>
+          <li>ITM 111</li>
+          <li>REL 250A</li>
         </ul>
-    </nav>
+      </div>
+      <div class="card">
+        <h2>Abuja, Nigeria</h2>
+        <img src="https://edugist.org/wp-content/uploads/2024/09/images-2024-09-05T114125.176.jpeg" alt="Aso Rock" />
+        <p>Aso Rock</p>
+      </div>
+    </section>
 
-    <main>
-        <h1>Home</h1>
+    <section class="certificate">
+      <h2>Web and Computer Programming Certificate</h2>
+      <div class="filters">
+        <button>All</button>
+        <button>CSE</button>
+        <button>WDD</button>
+      </div>
+      <div class="courses">
+        <div class="course cse">CSE 110</div>
+        <div class="course wdd">WDD 130</div>
+        <div class="course cse">CSE 111</div>
+        <div class="course cse">CSE 210</div>
+        <div class="course wdd">WDD 131</div>
+        <div class="course wdd">WDD 231</div>
+      </div>
+    </section>
+  </main>
 
-        <section class="cards">
-            <div class="card">
-                <h2>Course Work</h2>
-                <ul>
-                    <li>WDD 231</li>
-                    <li>ITM 111</li>
-                    <li>REL 250A</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h2>Abuja, Nigeria</h2>
-                <img src="https://edugist.org/wp-content/uploads/2024/09/images-2024-09-05T114125.176.jpeg"
-                    alt="Aso Rock" />
-                <p>Aso Rock</p>
-            </div>
-        </section>
-
-        <section class="certificate">
-            <h2>Web and Computer Programming Certificate</h2>
-            <div class="filters">
-                <button>All</button>
-                <button>CSE</button>
-                <button>WDD</button>
-            </div>
-            <div class="courses">
-                <div class="course cse">CSE 110</div>
-                <div class="course wdd">WDD 130</div>
-                <div class="course cse">CSE 111</div>
-                <div class="course cse">CSE 210</div>
-                <div class="course wdd">WDD 131</div>
-                <div class="course wdd">WDD 231</div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; <span id="year"></span> | Enoh Uwem Akpan | Nigeria</p>
-        <p id="lastModified"></p>
-    </footer>
+  <footer>
+    <p>&copy; <span id="year"></span> | Enoh Uwem Akpan | Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
-
 </html>
