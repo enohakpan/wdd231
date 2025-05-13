@@ -1,0 +1,139 @@
+{
+  "members": [
+    {
+      "name": "Lagos Fashion House",
+      "address": "123 Victoria Island, Lagos",
+      "phone": "+234 801 234 5678",
+      "website": "https://lagosfashionhouse.com",
+      "image": "fashion-house.png",
+      "level": 3,
+      "description": "Premium fashion retailer with the latest African and international trends"
+    },
+    {
+      "name": "African Textile Mills",
+      "address": "456 Yaba Industrial Estate, Lagos",
+      "phone": "+234 802 345 6789",
+      "website": "https://africantextilemills.ng",
+      "image": "textile-mills.png",
+      "level": 3,
+      "description": "Traditional and modern textile manufacturing for African fashion"
+    },
+    {
+      "name": "Nigerian Design Studio",
+      "address": "789 Ikeja GRA, Lagos",
+      "phone": "+234 803 456 7890",
+      "website": "https://nigeriandesignstudio.com",
+      "image": "design-studio.png",
+      "level": 2,
+      "description": "Fashion design and pattern making services"
+    },
+    {
+      "name": "African Fashion Academy",
+      "address": "321 Lekki Phase 1, Lagos",
+      "phone": "+234 804 567 8901",
+      "website": "https://africanfashionacademy.ng",
+      "image": "fashion-academy.png",
+      "level": 2,
+      "description": "Professional fashion design and styling education"
+    },
+    {
+      "name": "Boutique Collection",
+      "address": "654 Surulere, Lagos",
+      "phone": "+234 805 678 9012",
+      "website": "https://boutiquecollection.ng",
+      "image": "boutique.png",
+      "level": 1,
+      "description": "Curated collection of African designer wear"
+    },
+    {
+      "name": "Fashion Tech Hub",
+      "address": "987 Ikoyi, Lagos",
+      "phone": "+234 806 789 0123",
+      "website": "https://fashiontechhub.ng",
+      "image": "fashion-tech.png",
+      "level": 3,
+      "description": "Digital solutions for fashion businesses"
+    },
+    {
+      "name": "Lagos Fabric Market",
+      "address": "147 Balogun Market, Lagos",
+      "phone": "+234 807 890 1234",
+      "website": "https://lagosfabricmarket.com",
+      "image": "fabric-market.png",
+      "level": 1,
+      "description": "Wholesale and retail fabric market"
+    },
+    {
+      "name": "Digital Fashion Lab",
+      "address": "258 Computer Village, Ikeja",
+      "phone": "+234 808 901 2345",
+      "website": "https://digitalfashionlab.africa",
+      "image": "digital-fashion.png",
+      "level": 3,
+      "description": "Digital fashion design and virtual fitting solutions"
+    },
+    {
+      "name": "African Accessories",
+      "address": "369 Allen Avenue, Ikeja",
+      "phone": "+234 809 012 3456",
+      "website": "https://africanaccessories.ng",
+      "image": "accessories.png",
+      "level": 2,
+      "description": "Handcrafted African fashion accessories"
+    },
+    {
+      "name": "Fashion Photography Studio",
+      "address": "741 Victoria Island, Lagos",
+      "phone": "+234 810 123 4567",
+      "website": "https://fashionphotostudio.ng",
+      "image": "photo-studio.png",
+      "level": 2,
+      "description": "Professional fashion photography and modeling"
+    },
+    {
+      "name": "Eco Fashion House",
+      "address": "852 Lekki Phase 2, Lagos",
+      "phone": "+234 811 234 5678",
+      "website": "https://ecofashion.ng",
+      "image": "eco-fashion.png",
+      "level": 3,
+      "description": "Sustainable and eco-friendly fashion production"
+    },
+    {
+      "name": "Traditional Tailors Guild",
+      "address": "963 Ajah, Lagos",
+      "phone": "+234 812 345 6789",
+      "website": "https://traditionaltailors.ng",
+      "image": "tailors-guild.png",
+      "level": 1,
+      "description": "Traditional Nigerian tailoring services"
+    },
+    {
+      "name": "Fashion Marketing Agency",
+      "address": "159 Yaba, Lagos",
+      "phone": "+234 813 456 7890",
+      "website": "https://fashionmarketing.ng",
+      "image": "marketing-agency.png",
+      "level": 2,
+      "description": "Fashion brand marketing and promotion"
+    },
+    {
+      "name": "Fashion Logistics",
+      "address": "357 Oshodi, Lagos",
+      "phone": "+234 814 567 8901",
+      "website": "https://fashionlogistics.ng",
+      "image": "fashion-logistics.png",
+      "level": 1,
+      "description": "Specialized logistics for fashion industry"
+    },
+    {
+      "name": "Fashion Kids Boutique",
+      "address": "486 Gbagada, Lagos",
+      "phone": "+234 815 678 9012",
+      "website": "https://fashionkids.ng",
+      "image": "kids-boutique.png",
+      "level": 2,
+      "description": "Children's fashion and accessories"
+    }
+  ]
+} 

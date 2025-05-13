@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chamber of Commerce Directory Page">
+  <meta name="author" content="Enoh Uwem Akpan">
+  <title>Chamber | Directory</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo-container">
+        <img src="images/logo.png" alt="Chamber of Commerce Logo" class="logo">
+        <span class="logo-text">Chamber of Commerce</span>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle navigation menu">
+        <span class="menu-icon"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Our Local History</h1>
+          <p>Write a short history about the town or region. Include important facts or dates.</p>
+          <a href="#learn-more" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/mannequin-with-tape-measure.jpg" alt="Hero image">
+      </div>
+    </section>
+
+    <section class="info-section" id="learn-more">
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-card">
+            <h2>Demographics</h2>
+            <ul class="info-list">
+              <li><span>Population:</span> 25,000+</li>
+              <li><span>Main industries:</span> Fashion, Textiles, Small businesses</li>
+              <li><span>Languages:</span> English, Yoruba, Hausa</li>
+            </ul>
+          </div>
+          
+          <div class="info-card">
+            <h2>Upcoming Events</h2>
+            <ul class="info-list events-list">
+              <li>
+                <div class="event-date">JUL<br>12</div>
+                <div class="event-details">
+                  <h3>Design Expo</h3>
+                  <p>2025</p>
+                </div>
+              </li>
+              <li>
+                <div class="event-date">AUG<br>03</div>
+                <div class="event-details">
+                  <h3>Chamber Networking Luncheon</h3>
+                  <p>2025</p>
+                </div>
+              </li>
+              <li>
+                <div class="event-date">MONTHLY</div>
+                <div class="event-details">
+                  <h3>Creative Market Days</h3>
+                  <p>Every last Saturday of the month</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="container">
+        <h2 class="section-title">Explore the Area</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="images/gallery1.jpg" alt="Street fashion scene">
+            <div class="gallery-overlay">
+              <h3>Street Fashion</h3>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/gallery2.jpg" alt="Local marketplace">
+            <div class="gallery-overlay">
+              <h3>Local Market</h3>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/gallery3.jpg" alt="Cultural landmark">
+            <div class="gallery-overlay">
+              <h3>Cultural Landmark</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="Chamber of Commerce Logo" class="logo">
+          <h3>Chamber of Commerce</h3>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <address>
+            <p>123 Commerce Street</p>
+            <p>City, State 12345</p>
+            <p>Email: info@chamber.com</p>
+            <p>Phone: (123) 456-7890</p>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Chamber of Commerce. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple JavaScript for mobile menu toggle
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      document.querySelector('.nav').classList.toggle('nav-open');
+      this.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

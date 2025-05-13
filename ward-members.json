@@ -1,0 +1,28 @@
+{
+  "Family_Name": "Akpan",
+  "move_in_date": "2023-01-15",
+  "number_of_people_in_family": 4,
+  "met_with_bishop": true,
+  "family_members": [
+    {
+      "name": "John Akpan",
+      "gender": "male",
+      "birth_date": "1985-05-20"
+    },
+    {
+      "name": "Mary Akpan",
+      "gender": "female",
+      "birth_date": "1987-08-15"
+    },
+    {
+      "name": "Samuel Akpan",
+      "gender": "male",
+      "birth_date": "2010-03-10"
+    },
+    {
+      "name": "Sarah Akpan",
+      "gender": "female",
+      "birth_date": "2012-11-25"
+    }
+  ]
+}

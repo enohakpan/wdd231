@@ -1,0 +1,346 @@
+/* ===== VARIABLES ===== */
+:root {
+    --primary-color: #1a365d;
+    --secondary-color: #2b6cb0;
+    --accent-color: #c53030;
+    --background-color: #f7fafc;
+    --text-color: #2d3748;
+    --card-background: #ffffff;
+    --header-height: 60px;
+    --nav-height: 50px;
+}
+
+/* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: var(--primary-color);
+    height: var(--header-height);
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.header-text h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.social {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.social img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    transition: transform 0.2s;
+}
+
+.social img:hover {
+    transform: scale(1.1);
+}
+
+.menubutton {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.menubutton.open {
+    transform: rotate(90deg);
+}
+
+.menubutton span {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+    background-color: var(--secondary-color);
+    height: var(--nav-height);
+    position: sticky;
+    top: var(--header-height);
+    z-index: 99;
+}
+
+.navlinks {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+}
+
+.navlinks.open {
+    display: flex;
+}
+
+.navlinks li {
+    margin: 0;
+    width: 100%;
+}
+
+.navlinks a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.navlinks a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navlinks a.active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+    flex: 1;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* View Toggle */
+.view-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.view-toggle button {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.view-toggle button:hover {
+    background-color: var(--primary-color);
+}
+
+.view-toggle button.active {
+    background-color: var(--primary-color);
+}
+
+/* Member Container */
+#member-container {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+/* Member Cards */
+.member-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.member-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.member-card h3 {
+    color: #1a365d;
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.member-card p {
+    margin: 0.5rem 0;
+    color: #2d3748;
+}
+
+.member-card a {
+    color: #2b6cb0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.member-card a:hover {
+    color: #1a365d;
+    text-decoration: underline;
+}
+
+.membership-level {
+    font-weight: bold;
+    color: #c53030;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background-color: rgba(197, 48, 48, 0.1);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 1rem;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-info h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #e2e8f0;
+}
+
+/* Add styles for social icons with better contrast */
+.social i {
+    font-size: 1.5rem;
+    color: #ffffff;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.social a:hover i {
+    color: #e2e8f0;
+    transform: scale(1.1);
+}
+
+/* Mobile Navigation */
+@media screen and (max-width: 699px) {
+    .navlinks {
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        background-color: var(--primary-color);
+        padding: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .navlinks.open {
+        display: flex;
+        animation: slideDown 0.3s ease-out;
+    }
+
+    .navlinks li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navlinks li:last-child {
+        border-bottom: none;
+    }
+
+    .navlinks a {
+        padding: 1rem;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+} 
