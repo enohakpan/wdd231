@@ -1,0 +1,39 @@
+/* Small Screen Footer Styles */
+@media screen and (max-width: 767px) {
+  /* Overall footer text size */
+  .footer-content {
+    font-size: 0.7rem; /* Very small font size */
+  }
+
+  /* Footer logo text */
+  .footer-logo .logo-text h3 {
+    font-size: 1rem;
+  }
+
+  .footer-logo .logo-text p {
+    font-size: 0.65rem;
+  }
+
+  /* Footer sections text */
+  .footer-info p,
+  .footer-contact p,
+  .footer-links a,
+  .footer-social a {
+    font-size: 0.5rem;
+  }
+
+  /* Footer headings */
+  .footer-content h4 {
+    font-size: 0.9rem;
+  }
+
+  /* Copyright section */
+  .footer-bottom p {
+    font-size: 0.65rem;
+  }
+
+  /* Social icons */
+  .social-icons a {
+    font-size: 0.8rem;
+  }
+}

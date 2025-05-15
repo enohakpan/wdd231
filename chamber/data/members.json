@@ -1,139 +1,74 @@
 {
   "members": [
     {
-      "name": "Lagos Fashion House",
-      "address": "123 Victoria Island, Lagos",
-      "phone": "+234 801 234 5678",
-      "website": "https://lagosfashionhouse.com",
-      "image": "fashion-house.png",
-      "level": 3,
-      "description": "Premium fashion retailer with the latest African and international trends"
+      "id": 1,
+      "name": "TechNova Solutions",
+      "address": "123 Tech Avenue, Dash City, DC 12345",
+      "phone": "+2349012345678",
+      "website": "technovasolutions.com",
+      "image": "technova.jpg",
+      "membership": 3,
+      "description": "Leading provider of innovative software solutions for businesses of all sizes. Specializing in custom software development, cloud services, and digital transformation."
     },
     {
-      "name": "African Textile Mills",
-      "address": "456 Yaba Industrial Estate, Lagos",
-      "phone": "+234 802 345 6789",
-      "website": "https://africantextilemills.ng",
-      "image": "textile-mills.png",
-      "level": 3,
-      "description": "Traditional and modern textile manufacturing for African fashion"
+      "id": 2,
+      "name": "Green Harvest Organics",
+      "address": "456 Farm Road, Dash County, DC 67890",
+      "phone": "+2349087654321",
+      "website": "greenharvestorganics.com",
+      "image": "greenharvest.jpg",
+      "membership": 2,
+      "description": "Organic farm-to-table produce and specialty food items. Committed to sustainable farming practices and supporting local communities."
     },
     {
-      "name": "Nigerian Design Studio",
-      "address": "789 Ikeja GRA, Lagos",
-      "phone": "+234 803 456 7890",
-      "website": "https://nigeriandesignstudio.com",
-      "image": "design-studio.png",
-      "level": 2,
-      "description": "Fashion design and pattern making services"
+      "id": 3,
+      "name": "Dash Wellness Center",
+      "address": "789 Health Boulevard, Dash City, DC 23456",
+      "phone": "+2349123456789",
+      "website": "dashwellnesscenter.com",
+      "image": "dashwellness.jpg",
+      "membership": 3,
+      "description": "Comprehensive healthcare facility offering medical, dental, and wellness services for the entire family. Focused on preventive care and holistic well-being."
     },
     {
-      "name": "African Fashion Academy",
-      "address": "321 Lekki Phase 1, Lagos",
-      "phone": "+234 804 567 8901",
-      "website": "https://africanfashionacademy.ng",
-      "image": "fashion-academy.png",
-      "level": 2,
-      "description": "Professional fashion design and styling education"
+      "id": 4,
+      "name": "Dash Boutique",
+      "address": "101 Fashion Street, Dash City, DC 34567",
+      "phone": "+2349034567890",
+      "website": "dashboutique.com",
+      "image": "dashboutique.jpg",
+      "membership": 1,
+      "description": "Curated collection of fashion, accessories, and home goods from local and international designers. Offering personalized shopping experiences and styling services."
     },
     {
-      "name": "Boutique Collection",
-      "address": "654 Surulere, Lagos",
-      "phone": "+234 805 678 9012",
-      "website": "https://boutiquecollection.ng",
-      "image": "boutique.png",
-      "level": 1,
-      "description": "Curated collection of African designer wear"
+      "id": 5,
+      "name": "Dash Financial Advisors",
+      "address": "202 Money Lane, Dash City, DC 45678",
+      "phone": "+2349045678901",
+      "website": "dashfinancialadvisors.com",
+      "image": "dashfinancial.jpg",
+      "membership": 2,
+      "description": "Comprehensive financial planning and investment management services for individuals and businesses. Specializing in retirement planning, tax strategies, and wealth management."
     },
     {
-      "name": "Fashion Tech Hub",
-      "address": "987 Ikoyi, Lagos",
-      "phone": "+234 806 789 0123",
-      "website": "https://fashiontechhub.ng",
-      "image": "fashion-tech.png",
-      "level": 3,
-      "description": "Digital solutions for fashion businesses"
+      "id": 6,
+      "name": "Dash Digital Marketing",
+      "address": "303 Web Avenue, Dash City, DC 56789",
+      "phone": "+2349056789012",
+      "website": "dashdigitalmarketing.com",
+      "image": "dashdigital.jpg",
+      "membership": 3,
+      "description": "Full-service digital marketing agency specializing in SEO, social media management, content creation, and paid advertising campaigns for businesses of all sizes."
     },
     {
-      "name": "Lagos Fabric Market",
-      "address": "147 Balogun Market, Lagos",
-      "phone": "+234 807 890 1234",
-      "website": "https://lagosfabricmarket.com",
-      "image": "fabric-market.png",
-      "level": 1,
-      "description": "Wholesale and retail fabric market"
-    },
-    {
-      "name": "Digital Fashion Lab",
-      "address": "258 Computer Village, Ikeja",
-      "phone": "+234 808 901 2345",
-      "website": "https://digitalfashionlab.africa",
-      "image": "digital-fashion.png",
-      "level": 3,
-      "description": "Digital fashion design and virtual fitting solutions"
-    },
-    {
-      "name": "African Accessories",
-      "address": "369 Allen Avenue, Ikeja",
-      "phone": "+234 809 012 3456",
-      "website": "https://africanaccessories.ng",
-      "image": "accessories.png",
-      "level": 2,
-      "description": "Handcrafted African fashion accessories"
-    },
-    {
-      "name": "Fashion Photography Studio",
-      "address": "741 Victoria Island, Lagos",
-      "phone": "+234 810 123 4567",
-      "website": "https://fashionphotostudio.ng",
-      "image": "photo-studio.png",
-      "level": 2,
-      "description": "Professional fashion photography and modeling"
-    },
-    {
-      "name": "Eco Fashion House",
-      "address": "852 Lekki Phase 2, Lagos",
-      "phone": "+234 811 234 5678",
-      "website": "https://ecofashion.ng",
-      "image": "eco-fashion.png",
-      "level": 3,
-      "description": "Sustainable and eco-friendly fashion production"
-    },
-    {
-      "name": "Traditional Tailors Guild",
-      "address": "963 Ajah, Lagos",
-      "phone": "+234 812 345 6789",
-      "website": "https://traditionaltailors.ng",
-      "image": "tailors-guild.png",
-      "level": 1,
-      "description": "Traditional Nigerian tailoring services"
-    },
-    {
-      "name": "Fashion Marketing Agency",
-      "address": "159 Yaba, Lagos",
-      "phone": "+234 813 456 7890",
-      "website": "https://fashionmarketing.ng",
-      "image": "marketing-agency.png",
-      "level": 2,
-      "description": "Fashion brand marketing and promotion"
-    },
-    {
-      "name": "Fashion Logistics",
-      "address": "357 Oshodi, Lagos",
-      "phone": "+234 814 567 8901",
-      "website": "https://fashionlogistics.ng",
-      "image": "fashion-logistics.png",
-      "level": 1,
-      "description": "Specialized logistics for fashion industry"
-    },
-    {
-      "name": "Fashion Kids Boutique",
-      "address": "486 Gbagada, Lagos",
-      "phone": "+234 815 678 9012",
-      "website": "https://fashionkids.ng",
-      "image": "kids-boutique.png",
-      "level": 2,
-      "description": "Children's fashion and accessories"
+      "id": 7,
+      "name": "Dash Auto Repair",
+      "address": "404 Mechanic Street, Dash City, DC 67890",
+      "phone": "+2349067890123",
+      "website": "dashautorepair.com",
+      "image": "dashautos.jpg",
+      "membership": 1,
+      "description": "Family-owned auto repair shop providing quality service for all makes and models. Specializing in preventive maintenance, diagnostics, and repairs with a customer-first approach."
     }
   ]
-} 
+}

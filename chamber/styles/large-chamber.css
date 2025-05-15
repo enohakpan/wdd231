@@ -1,288 +1,57 @@
-/* ===== LARGE SCREEN STYLES (700px and up) ===== */
-@media screen and (min-width: 700px) {
-    /* Header */
-    header {
-        padding: 0 2rem;
-    }
+/* Large Screen Styles (Desktop) */
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: var(--container-width);
+    padding: 0 2rem;
+  }
 
-    .header-text h1 {
-        font-size: 1.5rem;
-    }
+  /* Header Styles */
+  .header-container {
+    padding: 0;
+  }
 
-    .social {
-        display: flex;
-        gap: 1.5rem;
-    }
+  /* Page Banner */
+  .page-banner {
+    padding: 5rem 0;
+  }
 
-    .social img {
-        width: 24px;
-        height: 24px;
-        transition: transform 0.3s ease;
-    }
+  .page-banner h1 {
+    font-size: 3rem;
+  }
 
-    .social img:hover {
-        transform: scale(1.1);
-    }
+  /* Main Content Styles */
+  .directory-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-    .menubutton {
-        display: none;
-    }
+  /* Modal Styles */
+  .modal-content {
+    max-width: 900px;
+  }
 
-    /* Navigation */
-    nav {
-        padding: 0;
-    }
+  .company-banner {
+    height: 250px;
+  }
 
-    .navlinks {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        padding: 0 2rem;
-        position: static;
-        background-color: var(--secondary-color);
-    }
+  /* Footer Styles */
+  .footer-content {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+  }
 
-    .navlinks li {
-        margin: 0;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        border-bottom: none;
-    }
+  .footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    .navlinks a {
-        padding: 0 1.5rem;
-        height: 100%;
-        display: flex;
-        align-items: center;
-    }
-
-    .navlinks a:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .navlinks a.active {
-        background-color: rgba(255, 255, 255, 0.3);
-    }
-
-    /* Main Content */
-    main {
-        padding: 2rem;
-    }
-
-    /* Member Container */
-    #member-container.grid-view {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-    }
-
-    #member-container.list-view {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    #member-container.list-view .member-card {
-        display: grid;
-        grid-template-columns: 120px 1fr auto;
-        align-items: center;
-        text-align: left;
-        gap: 2rem;
-        padding: 1rem 2rem;
-    }
-
-    #member-container.list-view .member-card img {
-        margin: 0;
-    }
-
-    #member-container.list-view .member-card h3 {
-        margin: 0;
-        font-size: 1.3rem;
-    }
-
-    #member-container.list-view .member-card p {
-        margin: 0.25rem 0;
-    }
-
-    #member-container.list-view .membership-level {
-        text-align: right;
-        margin: 0;
-        padding: 0.5rem 1rem;
-    }
-
-    /* Footer */
-    footer {
-        padding: 3rem 2rem;
-    }
-
-    .footer-info {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        text-align: left;
-        max-width: 1000px;
-        margin: 0 auto 2rem;
-    }
-
-    .contact-info {
-        text-align: left;
-    }
-
-    .footer-bottom {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 1rem;
-        max-width: 1000px;
-        margin: 0 auto;
-    }
-
-    .navlinks.open {
-        display: flex;
-    }
-
-    .history {
-        text-align: center;
-        background-color: azure;
-        /* padding: 10px; */
-        margin: 10px 300px;
-    }
-
-    .hero-image {
-        position: relative;
-    }
-
-    .hero-image img {
-        margin: 0;
-        width: 800px;
-        height: 400px;
-        opacity: 0.7;
-    }
-
-    .hero-content {
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        width: 100%;
-        color: #000;
-        background-color: #fff 0.6;
-    }
-
-    .hero-content h2 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-        font-family: 'Times New Roman', Times, serif;
-    }
-
-    .flex {
-        display: flex;
-        justify-content: space-between;
-        margin: 20px 300px;
-        background-color: azure;
-        padding: 10px;
-    }
-
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    .demographics, .events {
-        width: 100%;
-        background-color: azure;
-        padding: 20px;
-    }
-
-    .demographics h2, .events h2 {
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 20px;
-    }
-
-    .demographics li, .events li {
-        text-align: left;
-        margin: 10px;
-    }
+  .footer-bottom p {
+    margin-bottom: 0;
+  }
 }
 
-@media screen and (min-width: 768px) {
-    /* Header and Navigation */
-    header {
-        background-color: #1a365d;  /* Using primary color */
-    }
-
-    .navlinks {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        background-color: #1a365d;  /* Using primary color */
-    }
-
-    .navlinks a {
-        color: #ffffff;
-        padding: 0.75rem 1.5rem;
-    }
-
-    .navlinks a:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .navlinks a.active {
-        background-color: rgba(255, 255, 255, 0.3);
-    }
-
-    /* Member Cards */
-    .member-card {
-        background-color: #ffffff;
-        border: 1px solid #e2e8f0;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .member-card h3 {
-        color: #1a365d;  /* Using primary color */
-    }
-
-    .member-card p {
-        color: #2d3748;  /* Using text color */
-    }
-
-    .member-card a {
-        color: #2b6cb0;  /* Using secondary color */
-    }
-
-    .member-card a:hover {
-        color: #1a365d;  /* Using primary color */
-    }
-
-    .membership-level {
-        color: #c53030;  /* Using accent color */
-        background-color: rgba(197, 48, 48, 0.1);
-    }
-
-    /* Footer */
-    footer {
-        background-color: #1a365d;  /* Using primary color */
-        color: #e2e8f0;
-    }
-
-    .footer-content a {
-        color: #e2e8f0;
-    }
-
-    .footer-content a:hover {
-        color: #ffffff;
-    }
-
-    .social i {
-        color: #ffffff;
-    }
-
-    .social a:hover i {
-        color: #e2e8f0;
-    }
+@media screen and (min-width: 1200px) {
+  .directory-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
