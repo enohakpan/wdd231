@@ -1,74 +1,94 @@
 {
-  "members": [
-    {
-      "id": 1,
-      "name": "TechNova Solutions",
-      "address": "123 Tech Avenue, Dash City, DC 12345",
-      "phone": "+2349012345678",
-      "website": "technovasolutions.com",
-      "image": "technova.jpg",
-      "membership": 3,
-      "description": "Leading provider of innovative software solutions for businesses of all sizes. Specializing in custom software development, cloud services, and digital transformation."
-    },
-    {
-      "id": 2,
-      "name": "Green Harvest Organics",
-      "address": "456 Farm Road, Dash County, DC 67890",
-      "phone": "+2349087654321",
-      "website": "greenharvestorganics.com",
-      "image": "greenharvest.jpg",
-      "membership": 2,
-      "description": "Organic farm-to-table produce and specialty food items. Committed to sustainable farming practices and supporting local communities."
-    },
-    {
-      "id": 3,
-      "name": "Dash Wellness Center",
-      "address": "789 Health Boulevard, Dash City, DC 23456",
-      "phone": "+2349123456789",
-      "website": "dashwellnesscenter.com",
-      "image": "dashwellness.jpg",
-      "membership": 3,
-      "description": "Comprehensive healthcare facility offering medical, dental, and wellness services for the entire family. Focused on preventive care and holistic well-being."
-    },
-    {
-      "id": 4,
-      "name": "Dash Boutique",
-      "address": "101 Fashion Street, Dash City, DC 34567",
-      "phone": "+2349034567890",
-      "website": "dashboutique.com",
-      "image": "dashboutique.jpg",
-      "membership": 1,
-      "description": "Curated collection of fashion, accessories, and home goods from local and international designers. Offering personalized shopping experiences and styling services."
-    },
-    {
-      "id": 5,
-      "name": "Dash Financial Advisors",
-      "address": "202 Money Lane, Dash City, DC 45678",
-      "phone": "+2349045678901",
-      "website": "dashfinancialadvisors.com",
-      "image": "dashfinancial.jpg",
-      "membership": 2,
-      "description": "Comprehensive financial planning and investment management services for individuals and businesses. Specializing in retirement planning, tax strategies, and wealth management."
-    },
-    {
-      "id": 6,
-      "name": "Dash Digital Marketing",
-      "address": "303 Web Avenue, Dash City, DC 56789",
-      "phone": "+2349056789012",
-      "website": "dashdigitalmarketing.com",
-      "image": "dashdigital.jpg",
-      "membership": 3,
-      "description": "Full-service digital marketing agency specializing in SEO, social media management, content creation, and paid advertising campaigns for businesses of all sizes."
-    },
-    {
-      "id": 7,
-      "name": "Dash Auto Repair",
-      "address": "404 Mechanic Street, Dash City, DC 67890",
-      "phone": "+2349067890123",
-      "website": "dashautorepair.com",
-      "image": "dashautos.jpg",
-      "membership": 1,
-      "description": "Family-owned auto repair shop providing quality service for all makes and models. Specializing in preventive maintenance, diagnostics, and repairs with a customer-first approach."
-    }
-  ]
+    "members": [
+        {
+            "name": "Dash Financial Services",
+            "address": "456 Finance Ave, Dash City",
+            "phone": "(555) 234-5678",
+            "website": "https://dashfinancial.example.com",
+            "image": "images/dashfinancial.jpg",
+            "membershipLevel": "gold",
+            "description": "Providing comprehensive financial planning and investment services to individuals and businesses."
+        },
+        {
+            "name": "TechNova Solutions",
+            "address": "789 Innovation Dr, Dash City",
+            "phone": "(555) 345-6789",
+            "website": "https://technova.example.com",
+            "image": "images/technova.jpg",
+            "membershipLevel": "silver",
+            "description": "Cutting-edge software development and IT consulting services for businesses of all sizes."
+        },
+        {
+            "name": "Dash Boutique",
+            "address": "123 Fashion St, Dash City",
+            "phone": "(555) 456-7890",
+            "website": "https://dashboutique.example.com",
+            "image": "images/dashboutique.jpg",
+            "membershipLevel": "gold",
+            "description": "Curated fashion collections featuring local designers and sustainable clothing options."
+        },
+        {
+            "name": "Green Harvest Organics",
+            "address": "321 Nature Way, Dash City",
+            "phone": "(555) 567-8901",
+            "website": "https://greenharvest.example.com",
+            "image": "images/greenharvest.jpg",
+            "membershipLevel": "silver",
+            "description": "Locally grown organic produce and sustainable food products for health-conscious consumers."
+        },
+        {
+            "name": "Dash Digital Marketing",
+            "address": "654 Web Lane, Dash City",
+            "phone": "(555) 678-9012",
+            "website": "https://dashdigital.example.com",
+            "image": "images/dashdigital.jpg",
+            "membershipLevel": "gold",
+            "description": "Full-service digital marketing agency specializing in SEO, social media, and content creation."
+        },
+        {
+            "name": "Dash Auto Repair",
+            "address": "987 Mechanic Blvd, Dash City",
+            "phone": "(555) 789-0123",
+            "website": "https://dashautos.example.com",
+            "image": "images/dashautos.jpg",
+            "membershipLevel": "silver",
+            "description": "Professional automotive repair and maintenance services with certified technicians."
+        },
+        {
+            "name": "Dash Wellness Center",
+            "address": "246 Health Ave, Dash City",
+            "phone": "(555) 890-1234",
+            "website": "https://dashwellness.example.com",
+            "image": "images/dashwellness.jpg",
+            "membershipLevel": "gold",
+            "description": "Comprehensive wellness services including fitness classes, nutrition counseling, and spa treatments."
+        },
+        {
+            "name": "Community Bank of Dash",
+            "address": "135 Main St, Dash City",
+            "phone": "(555) 901-2345",
+            "website": "https://communitydash.example.com",
+            "image": "images/logo.png",
+            "membershipLevel": "bronze",
+            "description": "Local banking services with a focus on community investment and personal relationships."
+        },
+        {
+            "name": "Dash Legal Associates",
+            "address": "864 Justice Ave, Dash City",
+            "phone": "(555) 012-3456",
+            "website": "https://dashlegal.example.com",
+            "image": "images/logo.png",
+            "membershipLevel": "bronze",
+            "description": "Full-service law firm providing legal expertise to individuals and businesses in the community."
+        },
+        {
+            "name": "Dash Coffee Roasters",
+            "address": "753 Brew St, Dash City",
+            "phone": "(555) 123-4567",
+            "website": "https://dashcoffee.example.com",
+            "image": "images/logo.png",
+            "membershipLevel": "bronze",
+            "description": "Locally owned coffee shop featuring house-roasted beans and artisanal pastries."
+        }
+    ]
 }

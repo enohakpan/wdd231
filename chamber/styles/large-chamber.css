@@ -1,57 +1,56 @@
-/* Large Screen Styles (Desktop) */
-@media screen and (min-width: 992px) {
-  .container {
-    max-width: var(--container-width);
-    padding: 0 2rem;
-  }
-
+/* Large view styles */
+@media (min-width: 64em) {
   /* Header Styles */
-  .header-container {
-    padding: 0;
+  header h1 {
+    font-size: 1.8rem;
   }
 
-  /* Page Banner */
-  .page-banner {
-    padding: 5rem 0;
+  /* Navigation Styles */
+  #primary-nav {
+    justify-content: flex-end;
   }
 
-  .page-banner h1 {
-    font-size: 3rem;
+  #primary-nav li {
+    flex: 0 1 auto;
+  }
+
+  #primary-nav a {
+    padding: 1rem 1.5rem;
   }
 
   /* Main Content Styles */
-  .directory-grid {
+  main {
+    padding-top: 2rem;
+  }
+  
+  .hero-section {
+    height: 500px;
+    margin-bottom: 2rem;
+  }
+  
+  .events-section, .weather-section {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .events-section {
+    width: 48.5%;
+    margin-right: 3%;
+  }
+  
+  .weather-section {
+    width: 48.5%;
+  }
+
+  .hero-content h2 {
+    font-size: 2.8rem;
+  }
+
+  .spotlights-container {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  /* Modal Styles */
-  .modal-content {
-    max-width: 900px;
-  }
-
-  .company-banner {
-    height: 250px;
-  }
-
-  /* Footer Styles */
-  .footer-content {
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 3rem;
-  }
-
-  .footer-bottom .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer-bottom p {
-    margin-bottom: 0;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .directory-grid {
-    grid-template-columns: repeat(4, 1fr);
+  
+  .footer-map {
+    height: 300px;
   }
 }

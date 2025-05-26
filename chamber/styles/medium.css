@@ -1,133 +1,73 @@
-/* Medium Screen Styles (Tablet) */
-@media screen and (min-width: 768px) {
-  .container {
-    padding: 0 2rem;
-  }
-
+/* Medium view styles */
+@media (min-width: 32.5em) {
   /* Header Styles */
-  .header-container {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 2rem;
+  header h1 {
+    font-size: 1.5rem;
   }
 
-  .hamburger {
+  /* Navigation Styles */
+  #hamburger-btn {
     display: none;
   }
 
-  .nav-list {
+  #primary-nav {
     display: flex;
     flex-direction: row;
-    margin-top: 0;
-    justify-content: flex-end;
+    justify-content: center;
   }
 
-  .nav-list li {
-    margin-bottom: 0;
-    margin-left: 1.5rem;
+  #primary-nav li {
+    flex: 1 1 auto;
   }
 
-  .nav-list a {
-    padding: 0.5rem 1rem;
-  }
-
-  /* Page Banner */
-  .page-banner {
-    padding: 4rem 0;
-  }
-
-  .page-banner h1 {
-    font-size: 2.5rem;
+  #primary-nav a {
+    border: none;
+    padding: 1rem 0.5rem;
   }
 
   /* Main Content Styles */
-  main {
-    padding: 3rem 0;
+  .events-section, .weather-section {
+    display: inline-block;
+    width: 48.5%;
+    vertical-align: top;
+  }
+  
+  .events-section {
+    margin-right: 3%;
   }
 
-  .directory-controls {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem;
+  .hero-section {
+    height: 450px;
   }
 
-  .filter-options select {
-    width: auto;
-    min-width: 200px;
+  .hero-content h2 {
+    font-size: 2.5rem;
   }
 
-  .directory-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-
-  /* List View Styles */
-  .directory-list.list-view .directory-item {
-    flex-direction: row;
-    align-items: stretch;
-  }
-
-  .directory-list.list-view .directory-item-img {
-    width: 200px;
-    height: auto;
-    flex-shrink: 0;
-  }
-
-  .directory-list.list-view .directory-item-content {
-    flex-grow: 1;
-    padding: 1.5rem;
-  }
-
-  /* Modal Styles */
-  .modal-content {
-    max-width: 80%;
-  }
-
-  .company-banner {
-    height: 200px;
-  }
-
-  .company-logo {
-    width: 120px;
-    height: 120px;
-    bottom: -60px;
-  }
-
-  .company-header {
-    margin-bottom: 3rem;
-  }
-
-  .company-details {
-    display: grid;
+  .spotlights-container {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
 
   /* Footer Styles */
   .footer-content {
-    grid-template-columns: repeat(2, 1fr);
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .footer-logo {
+    flex-direction: row;
     text-align: left;
+    flex: 1;
   }
 
-  .footer-info,
-  .footer-contact,
-  .footer-links,
-  .footer-social {
-    text-align: left;
+  .footer-logo-img {
+    margin-right: 1.5rem;
+    margin-bottom: 0;
   }
 
-  .footer-contact h4::after,
-  .footer-links h4::after,
-  .footer-social h4::after {
-    width: 50px;
-  }
-
-  .footer-contact p {
-    justify-content: flex-start;
-  }
-
-  .social-icons {
-    justify-content: flex-start;
+  .footer-map {
+    flex: 1;
+    height: 250px;
   }
 }
