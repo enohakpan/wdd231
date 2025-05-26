@@ -53,4 +53,129 @@
   .footer-map {
     height: 300px;
   }
+
+  /* Directory Page Styles */
+  .directory-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .directory-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .directory-list .directory-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    padding: 1.5rem;
+  }
+
+  /* Discover Page Styles */
+  .page-banner {
+    padding: 4rem 0;
+  }
+
+  .page-banner h1 {
+    font-size: 3rem;
+  }
+
+  .page-content-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem;
+  }
+
+  /* Join Page Styles */
+  .membership-options {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .membership-option {
+    flex: 0 1 30%;
+  }
+}
+/* Large view styles for Discover page */
+@media (min-width: 64em) {
+  /* Discover Page Styles */
+  .attractions-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .stats-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* Join Page Styles */
+  .membership-options {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  /* Navbar Styles */
+  .nav-list li {
+    margin: 0 1rem;
+  }
+  
+  .nav-list a {
+    padding: 1rem 1.5rem;
+  }
+}
+/* Large view styles for Join page */
+@media (min-width: 64em) {
+  .join-container {
+    flex-direction: row;
+  }
+  
+  .form-section {
+    flex: 2;
+  }
+  
+  .membership-cards {
+    flex: 1;
+  }
+  
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .application-summary, .next-steps {
+    max-width: 60%;
+  }
+}
+/* Large view styles for updated membership benefits */
+@media (min-width: 64em) {
+  .form-section {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .membership-benefits {
+    max-width: 1000px;
+    margin: 3rem auto 0;
+  }
+}
+/* Large view styles for Directory page */
+@media (min-width: 64em) {
+  .directory-hero {
+    height: 250px;
+  }
+  
+  .directory-hero-content h1 {
+    font-size: 3rem;
+  }
+  
+  .directory-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .list-view .directory-item {
+    grid-template-columns: 150px 1fr;
+  }
+  
+  .modal-content {
+    width: 80%;
+    max-width: 1000px;
+  }
 }

@@ -5,7 +5,7 @@
             "address": "456 Finance Ave, Dash City",
             "phone": "(555) 234-5678",
             "website": "https://dashfinancial.example.com",
-            "image": "images/dashfinancial.jpg",
+            "image": "../images/dashfinancial.jpg",
             "membershipLevel": "gold",
             "description": "Providing comprehensive financial planning and investment services to individuals and businesses."
         },
@@ -14,7 +14,7 @@
             "address": "789 Innovation Dr, Dash City",
             "phone": "(555) 345-6789",
             "website": "https://technova.example.com",
-            "image": "images/technova.jpg",
+            "image": "../images/technova.jpg",
             "membershipLevel": "silver",
             "description": "Cutting-edge software development and IT consulting services for businesses of all sizes."
         },
@@ -23,7 +23,7 @@
             "address": "123 Fashion St, Dash City",
             "phone": "(555) 456-7890",
             "website": "https://dashboutique.example.com",
-            "image": "images/dashboutique.jpg",
+            "image": "../images/dashboutique.jpg",
             "membershipLevel": "gold",
             "description": "Curated fashion collections featuring local designers and sustainable clothing options."
         },
@@ -32,7 +32,7 @@
             "address": "321 Nature Way, Dash City",
             "phone": "(555) 567-8901",
             "website": "https://greenharvest.example.com",
-            "image": "images/greenharvest.jpg",
+            "image": "../images/greenharvest.jpg",
             "membershipLevel": "silver",
             "description": "Locally grown organic produce and sustainable food products for health-conscious consumers."
         },
@@ -41,7 +41,7 @@
             "address": "654 Web Lane, Dash City",
             "phone": "(555) 678-9012",
             "website": "https://dashdigital.example.com",
-            "image": "images/dashdigital.jpg",
+            "image": "../images/dashdigital.jpg",
             "membershipLevel": "gold",
             "description": "Full-service digital marketing agency specializing in SEO, social media, and content creation."
         },
@@ -50,7 +50,7 @@
             "address": "987 Mechanic Blvd, Dash City",
             "phone": "(555) 789-0123",
             "website": "https://dashautos.example.com",
-            "image": "images/dashautos.jpg",
+            "image": "../images/dashautos.jpg",
             "membershipLevel": "silver",
             "description": "Professional automotive repair and maintenance services with certified technicians."
         },
@@ -59,7 +59,7 @@
             "address": "246 Health Ave, Dash City",
             "phone": "(555) 890-1234",
             "website": "https://dashwellness.example.com",
-            "image": "images/dashwellness.jpg",
+            "image": "../images/dashwellness.jpg",
             "membershipLevel": "gold",
             "description": "Comprehensive wellness services including fitness classes, nutrition counseling, and spa treatments."
         },
@@ -68,7 +68,7 @@
             "address": "135 Main St, Dash City",
             "phone": "(555) 901-2345",
             "website": "https://communitydash.example.com",
-            "image": "images/logo.png",
+            "image": "../images/logo.png",
             "membershipLevel": "bronze",
             "description": "Local banking services with a focus on community investment and personal relationships."
         },
@@ -77,7 +77,7 @@
             "address": "864 Justice Ave, Dash City",
             "phone": "(555) 012-3456",
             "website": "https://dashlegal.example.com",
-            "image": "images/logo.png",
+            "image": "../images/logo.png",
             "membershipLevel": "bronze",
             "description": "Full-service law firm providing legal expertise to individuals and businesses in the community."
         },
@@ -86,7 +86,7 @@
             "address": "753 Brew St, Dash City",
             "phone": "(555) 123-4567",
             "website": "https://dashcoffee.example.com",
-            "image": "images/logo.png",
+            "image": "../images/logo.png",
             "membershipLevel": "bronze",
             "description": "Locally owned coffee shop featuring house-roasted beans and artisanal pastries."
         }

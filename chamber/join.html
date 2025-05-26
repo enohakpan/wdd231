@@ -1,60 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Join the De Dash-Dash Chamber of Commerce.">
-  <title>Join Us | De Dash-Dash Chamber of Commerce</title>
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/chamber.css">
-  <link rel="stylesheet" href="styles/medium.css">
-  <link rel="stylesheet" href="styles/large-chamber.css">
-  <link rel="stylesheet" href="styles/footer-responsive.css">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us | Dash Chamber of Commerce</title>
+    <meta name="description" content="Apply to join the Dash Chamber of Commerce through our membership application form">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/medium.css" media="(min-width: 32.5em)">
+    <link rel="stylesheet" href="styles/large-chamber.css" media="(min-width: 64em)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="logo-box">
-      <img src="images/logo.png" alt="De Dash-Dash Logo" class="logo-image">
-      <div class="logo-text">
-        <h3>De Dash-Dash</h3>
-        <p>Chamber of Commerce</p>
-      </div>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Dash Chamber of Commerce Logo" class="logo">
+                <h1>Dash Chamber of Commerce</h1>
+            </div>
+            <button id="hamburger-btn">
+                <img src="images/menu-removebg-preview.png" alt="Menu" id="menu-icon">
+            </button>
+        </div>
+        <nav>
+            <ul id="primary-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="join-hero">
+        <div class="join-hero-content">
+            <h1>Join Our Community</h1>
+            <p>Connect. Grow. Thrive.</p>
+        </div>
     </div>
-    <nav class="navbar">
-      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="join.html" class="active">Join</a></li>
-        <li><a href="discover.html">Discover</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main role="main">
-    <section class="page-banner">
-      <div class="container">
-        <h1>Join Our Chamber</h1>
-        <p>Become a part of our vibrant business community.</p>
-      </div>
-    </section>
+    <main class="join-main">
+        <section class="form-section">
+            <div class="form-progress">
+                <div class="progress-step active" data-step="1">1</div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="2">2</div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="3">3</div>
+            </div>
+            
+            <form method="get" action="thankyou.html" id="join-form">
+                <div class="form-page active" id="page-1">
+                    <h2>Personal Information</h2>
+                    <p class="form-intro">Tell us about yourself</p>
+                    
+                    <div class="form-group">
+                        <label for="first-name">First Name*</label>
+                        <input type="text" id="first-name" name="first-name" required autocomplete="given-name" title="Please enter your first name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="last-name">Last Name*</label>
+                        <input type="text" id="last-name" name="last-name" required autocomplete="family-name" title="Please enter your last name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="title">Position/Title</label>
+                        <input type="text" id="title" name="title" pattern="[A-Za-z\s\-]{7,}" autocomplete="organization-title" title="Please enter your position (minimum 7 characters, only letters, hyphens, and spaces)">
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="button" class="next-btn">Continue</button>
+                    </div>
+                </div>
+                
+                <div class="form-page" id="page-2">
+                    <h2>Contact Details</h2>
+                    <p class="form-intro">How can we reach you?</p>
+                    
+                    <div class="form-group">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@domain.com" title="Please enter a valid email address">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number*</label>
+                        <input type="tel" id="phone" name="phone" required autocomplete="tel" title="Please enter your phone number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="business-name">Business/Organization Name*</label>
+                        <input type="text" id="business-name" name="business-name" required autocomplete="organization" title="Please enter your business or organization name">
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="button" class="prev-btn">Back</button>
+                        <button type="button" class="next-btn">Continue</button>
+                    </div>
+                </div>
+                
+                <div class="form-page" id="page-3">
+                    <h2>Membership Details</h2>
+                    <p class="form-intro">Choose your membership level</p>
+                    
+                    <div class="form-group membership-select">
+                        <label for="membership-level">Membership Level*</label>
+                        <div class="membership-options-select">
+                            <div class="membership-option-radio">
+                                <input type="radio" id="np" name="membership-level" value="np" required>
+                                <label for="np">NP Membership <span>(Non-profit, no fee)</span></label>
+                            </div>
+                            <div class="membership-option-radio">
+                                <input type="radio" id="bronze" name="membership-level" value="bronze">
+                                <label for="bronze">Bronze Membership <span>($50/yr)</span></label>
+                            </div>
+                            <div class="membership-option-radio">
+                                <input type="radio" id="silver" name="membership-level" value="silver">
+                                <label for="silver">Silver Membership <span>($100/yr)</span></label>
+                            </div>
+                            <div class="membership-option-radio">
+                                <input type="radio" id="gold" name="membership-level" value="gold">
+                                <label for="gold">Gold Membership <span>($250/yr)</span></label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="business-description">Business Description</label>
+                        <textarea id="business-description" name="business-description" title="Please provide a brief description of your business"></textarea>
+                    </div>
+                    
+                    <input type="hidden" id="timestamp" name="timestamp">
+                    
+                    <div class="form-buttons">
+                        <button type="button" class="prev-btn">Back</button>
+                        <button type="submit" class="submit-btn">Submit Application</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        
+        <section class="membership-benefits">
+            <h2>Membership Benefits</h2>
+            <div class="benefits-container">
+                <div class="membership-card np-card">
+                    <div class="card-icon">NP</div>
+                    <h3>NP Membership</h3>
+                    <p>For non-profit organizations</p>
+                    <p class="price">Free</p>
+                    <a href="#np-modal" class="info-btn">View Benefits</a>
+                </div>
+                
+                <div class="membership-card bronze-card">
+                    <div class="card-icon">B</div>
+                    <h3>Bronze Membership</h3>
+                    <p>For small businesses</p>
+                    <p class="price">$50/yr</p>
+                    <a href="#bronze-modal" class="info-btn">View Benefits</a>
+                </div>
+                
+                <div class="membership-card silver-card">
+                    <div class="card-icon">S</div>
+                    <h3>Silver Membership</h3>
+                    <p>For medium businesses</p>
+                    <p class="price">$100/yr</p>
+                    <a href="#silver-modal" class="info-btn">View Benefits</a>
+                </div>
+                
+                <div class="membership-card gold-card">
+                    <div class="card-icon">G</div>
+                    <h3>Gold Membership</h3>
+                    <p>For large businesses</p>
+                    <p class="price">$250/yr</p>
+                    <a href="#gold-modal" class="info-btn">View Benefits</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Membership Level Modals -->
+    <div id="np-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>NP Membership Benefits</h2>
+            <ul>
+                <li>Basic directory listing</li>
+                <li>Networking event invitations</li>
+                <li>Monthly newsletter</li>
+                <li>Community event participation</li>
+            </ul>
+            <p><strong>Cost:</strong> Free for non-profit organizations</p>
+        </div>
+    </div>
+    
+    <div id="bronze-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Bronze Membership Benefits</h2>
+            <ul>
+                <li>Enhanced directory listing</li>
+                <li>Networking event invitations</li>
+                <li>Monthly newsletter</li>
+                <li>Social media mention (quarterly)</li>
+                <li>Small business resources</li>
+            </ul>
+            <p><strong>Cost:</strong> $50 per year</p>
+        </div>
+    </div>
+    
+    <div id="silver-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Silver Membership Benefits</h2>
+            <ul>
+                <li>All Bronze benefits</li>
+                <li>Featured in rotation on homepage</li>
+                <li>Social media promotion (monthly)</li>
+                <li>Event discounts (10%)</li>
+                <li>Business training workshops</li>
+                <li>Advertising opportunities</li>
+            </ul>
+            <p><strong>Cost:</strong> $100 per year</p>
+        </div>
+    </div>
+    
+    <div id="gold-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Gold Membership Benefits</h2>
+            <ul>
+                <li>All Silver benefits</li>
+                <li>Premium directory placement</li>
+                <li>Dedicated business spotlight</li>
+                <li>Event discounts (25%)</li>
+                <li>Event sponsorship opportunities</li>
+                <li>Business consulting services</li>
+                <li>Legislative advocacy</li>
+                <li>Press release distribution</li>
+            </ul>
+            <p><strong>Cost:</strong> $250 per year</p>
+        </div>
+    </div>
 
-    <section class="page-content-section text-center">
-      <h2>Membership Information</h2>
-      <p>Details about membership levels and benefits will be available here soon.</p>
-      <p>For now, please contact us at <a href="mailto:info@dedashchamber.com">info@dedashchamber.com</a> for inquiries.</p>
-      <!-- Placeholder for a join form -->
-    </section>
-  </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Dash Chamber of Commerce Logo" class="footer-logo-img">
+                <div class="footer-address">
+                    <h3>Dash Chamber of Commerce</h3>
+                    <p>123 Business Ave, Dash City, ST 12345</p>
+                    <p>info@dashchamber.org</p>
+                    <p>(555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-123.4567!3d47.5678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDM0JzA0LjEiTiAxMjPCsDI3JzI0LjEiVw!5e0!3m2!1sen!2sus!4v1234567890!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Dash Chamber of Commerce | Last Updated: <span id="last-updated"></span></p>
+        </div>
+    </footer>
 
-  <footer role="contentinfo">
-    <p>&copy; <span id="current-year"></span> De Dash-Dash Chamber of Commerce. All rights reserved.</p>
-  </footer>
-  <script src="scripts/script.js"></script> 
+    <script src="scripts/script.js"></script>
+    <script>
+        // Set the timestamp when the form loads
+        document.getElementById('timestamp').value = new Date().toISOString();
+        
+        // Multi-step form functionality
+        const formPages = document.querySelectorAll('.form-page');
+        const nextButtons = document.querySelectorAll('.next-btn');
+        const prevButtons = document.querySelectorAll('.prev-btn');
+        const progressSteps = document.querySelectorAll('.progress-step');
+        
+        // Next button functionality
+        nextButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const currentPage = button.closest('.form-page');
+                const currentIndex = Array.from(formPages).indexOf(currentPage);
+                
+                // Validate current page fields
+                const inputs = currentPage.querySelectorAll('input[required], select[required]');
+                let isValid = true;
+                
+                inputs.forEach(input => {
+                    if (!input.checkValidity()) {
+                        input.reportValidity();
+                        isValid = false;
+                    }
+                });
+                
+                if (isValid) {
+                    // Move to next page
+                    currentPage.classList.remove('active');
+                    formPages[currentIndex + 1].classList.add('active');
+                    
+                    // Update progress steps
+                    progressSteps[currentIndex].classList.add('completed');
+                    progressSteps[currentIndex + 1].classList.add('active');
+                }
+            });
+        });
+        
+        // Previous button functionality
+        prevButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const currentPage = button.closest('.form-page');
+                const currentIndex = Array.from(formPages).indexOf(currentPage);
+                
+                // Move to previous page
+                currentPage.classList.remove('active');
+                formPages[currentIndex - 1].classList.add('active');
+                
+                // Update progress steps
+                progressSteps[currentIndex].classList.remove('active');
+                progressSteps[currentIndex - 1].classList.add('active');
+            });
+        });
+        
+        // Modal functionality
+        const modals = document.querySelectorAll('.modal');
+        const modalLinks = document.querySelectorAll('.info-btn');
+        const closeButtons = document.querySelectorAll('.close-modal');
+        
+        modalLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const modalId = link.getAttribute('href');
+                document.querySelector(modalId).style.display = 'block';
+            });
+        });
+        
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.closest('.modal').style.display = 'none';
+            });
+        });
+        
+        window.addEventListener('click', (e) => {
+            modals.forEach(modal => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+        
+        // Animation for membership cards
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.membership-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('show');
+                }, 200 * index);
+            });
+        });
+    </script>
 </body>
 </html>

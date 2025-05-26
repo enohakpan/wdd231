@@ -1,71 +1,80 @@
 document.addEventListener("DOMContentLoaded", () => {
   // DOM Elements
-  const directoryList = document.getElementById("directory-list")
-  const gridViewBtn = document.querySelector(".grid-view")
-  const listViewBtn = document.querySelector(".list-view")
-  const modal = document.getElementById("company-modal")
-  const closeModal = document.querySelector(".close-modal")
-  const modalBody = document.querySelector(".modal-body")
-  const hamburger = document.querySelector(".hamburger")
-  const navList = document.querySelector(".nav-list")
+  const directoryList = document.getElementById("directory-list");
+  const gridViewBtn = document.querySelector(".grid-view");
+  const listViewBtn = document.querySelector(".list-view");
+  const searchInput = document.getElementById("directory-search");
+  const modal = document.getElementById("company-modal");
+  const closeModal = document.querySelector(".close-modal");
+  const modalBody = document.querySelector(".modal-body");
+  const hamburgerBtn = document.getElementById("hamburger-btn");
+  const primaryNav = document.getElementById("primary-nav");
+
+  // Store all members for filtering
+  let allMembers = [];
 
   // Set current year in footer
-  document.getElementById("current-year").textContent = new Date().getFullYear()
+  document.getElementById("current-year").textContent = new Date().getFullYear();
 
   // Set last modified date in footer
-  document.getElementById("last-modified").textContent = document.lastModified
+  document.getElementById("last-updated").textContent = document.lastModified;
 
   // Initialize directory
   async function initDirectory() {
     try {
       // Fetch the members data from JSON file
-      const response = await fetch("data/members.json")
+      const response = await fetch("data/members.json");
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      const data = await response.json()
+      const data = await response.json();
+      allMembers = data.members;
 
       // Remove skeleton loading
-      directoryList.innerHTML = ""
+      directoryList.innerHTML = "";
 
       // Add class for grid view
-      directoryList.classList.add("directory-grid")
+      directoryList.classList.add("directory-grid");
 
       // Render companies
-      renderCompanies(data.members)
+      renderCompanies(allMembers);
 
       // Set up event listeners
-      setupEventListeners()
+      setupEventListeners();
     } catch (error) {
-      console.error("Error loading directory data:", error)
+      console.error("Error loading directory data:", error);
       directoryList.innerHTML = `<div class="error-message">
         <p>Sorry, we couldn't load the directory data. Please try again later.</p>
-      </div>`
+      </div>`;
     }
   }
 
   // Render companies
   function renderCompanies(members) {
-    directoryList.innerHTML = ""
+    directoryList.innerHTML = "";
 
     if (members.length === 0) {
-      directoryList.innerHTML = '<div class="no-results"><p>No companies found in the directory.</p></div>'
-      return
+      directoryList.innerHTML = '<div class="no-results"><p>No companies found in the directory.</p></div>';
+      return;
     }
 
     members.forEach((member) => {
-      const memberElement = document.createElement("div")
-      memberElement.className = "directory-item"
-      memberElement.dataset.id = member.id
+      const memberElement = document.createElement("div");
+      memberElement.className = "directory-item";
+      memberElement.dataset.id = member.id;
 
-      // Get membership level text
-      let membershipText = "Member"
+      // Get membership level text and class
+      let membershipText = "Member";
+      let membershipClass = "bronze";
+      
       if (member.membership === 2) {
-        membershipText = "Silver Member"
+        membershipText = "Silver Member";
+        membershipClass = "silver";
       } else if (member.membership === 3) {
-        membershipText = "Gold Member"
+        membershipText = "Gold Member";
+        membershipClass = "gold";
       }
 
       memberElement.innerHTML = `
@@ -77,50 +86,67 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>${member.address}</p>
           <p>${member.phone}</p>
           <p><a href="https://${member.website}" target="_blank">${member.website}</a></p>
-          <span class="membership">${membershipText}</span>
+          <span class="membership ${membershipClass}">${membershipText}</span>
         </div>
-      `
+      `;
 
-      directoryList.appendChild(memberElement)
-    })
+      directoryList.appendChild(memberElement);
+    });
   }
 
   // Toggle view (grid/list)
   function toggleView(viewType) {
     if (viewType === "grid") {
-      directoryList.classList.add("directory-grid")
-      directoryList.classList.remove("list-view")
-      gridViewBtn.classList.add("active")
-      listViewBtn.classList.remove("active")
+      directoryList.classList.add("directory-grid");
+      directoryList.classList.remove("list-view");
+      gridViewBtn.classList.add("active");
+      listViewBtn.classList.remove("active");
     } else {
-      directoryList.classList.remove("directory-grid")
-      directoryList.classList.add("list-view")
-      listViewBtn.classList.add("active")
-      gridViewBtn.classList.remove("active")
+      directoryList.classList.remove("directory-grid");
+      directoryList.classList.add("list-view");
+      listViewBtn.classList.add("active");
+      gridViewBtn.classList.remove("active");
     }
+  }
+
+  // Filter companies by search term
+  function filterCompanies(searchTerm) {
+    searchTerm = searchTerm.toLowerCase();
+    
+    if (!searchTerm) {
+      renderCompanies(allMembers);
+      return;
+    }
+    
+    const filteredMembers = allMembers.filter(member => {
+      return (
+        member.name.toLowerCase().includes(searchTerm) ||
+        member.address.toLowerCase().includes(searchTerm) ||
+        member.website.toLowerCase().includes(searchTerm) ||
+        (member.description && member.description.toLowerCase().includes(searchTerm))
+      );
+    });
+    
+    renderCompanies(filteredMembers);
   }
 
   // Show company details in modal
   async function showCompanyDetails(memberId) {
     try {
-      // Fetch the members data from JSON file
-      const response = await fetch("data/members.json")
+      const member = allMembers.find((m) => m.id === Number(memberId));
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
+      if (!member) return;
 
-      const data = await response.json()
-      const member = data.members.find((m) => m.id === Number(memberId))
-
-      if (!member) return
-
-      // Get membership level text
-      let membershipText = "Member"
+      // Get membership level text and class
+      let membershipText = "Member";
+      let membershipClass = "bronze";
+      
       if (member.membership === 2) {
-        membershipText = "Silver Member"
+        membershipText = "Silver Member";
+        membershipClass = "silver";
       } else if (member.membership === 3) {
-        membershipText = "Gold Member"
+        membershipText = "Gold Member";
+        membershipClass = "gold";
       }
 
       modalBody.innerHTML = `
@@ -130,14 +156,14 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
           <div class="company-title">
             <h2>${member.name}</h2>
-            <span class="membership">${membershipText}</span>
+            <span class="membership ${membershipClass}">${membershipText}</span>
           </div>
         </div>
         
         <div class="company-details">
           <div class="company-info">
             <h3>About Us</h3>
-            <p>${member.description}</p>
+            <p>${member.description || "No description available."}</p>
           </div>
           
           <div class="company-contact">
@@ -149,85 +175,64 @@ document.addEventListener("DOMContentLoaded", () => {
             </ul>
           </div>
         </div>
-      `
+      `;
 
-      modal.style.display = "block"
-      document.body.style.overflow = "hidden"
+      modal.style.display = "block";
+      document.body.style.overflow = "hidden";
     } catch (error) {
-      console.error("Error loading member details:", error)
+      console.error("Error loading member details:", error);
     }
   }
 
   // Close modal
   function closeCompanyModal() {
-    modal.style.display = "none"
-    document.body.style.overflow = "auto"
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
   }
 
   // Toggle mobile menu
   function toggleMobileMenu() {
-    navList.classList.toggle("active")
-
-    // Toggle hamburger animation
-    const spans = hamburger.querySelectorAll("span")
-    if (navList.classList.contains("active")) {
-      spans[0].style.transform = "rotate(45deg) translate(5px, 5px)"
-      spans[1].style.opacity = "0"
-      spans[2].style.transform = "rotate(-45deg) translate(7px, -6px)"
-    } else {
-      spans[0].style.transform = "none"
-      spans[1].style.opacity = "1"
-      spans[2].style.transform = "none"
-    }
+    primaryNav.classList.toggle("open");
   }
 
   // Set up event listeners
   function setupEventListeners() {
     // View toggle
-    gridViewBtn.addEventListener("click", () => toggleView("grid"))
-    listViewBtn.addEventListener("click", () => toggleView("list"))
+    gridViewBtn.addEventListener("click", () => toggleView("grid"));
+    listViewBtn.addEventListener("click", () => toggleView("list"));
+
+    // Search functionality
+    searchInput.addEventListener("input", (e) => {
+      filterCompanies(e.target.value);
+    });
 
     // Company details
     directoryList.addEventListener("click", (e) => {
-      const directoryItem = e.target.closest(".directory-item")
+      const directoryItem = e.target.closest(".directory-item");
       if (directoryItem) {
-        showCompanyDetails(directoryItem.dataset.id)
+        showCompanyDetails(directoryItem.dataset.id);
       }
-    })
+    });
 
     // Close modal
-    closeModal.addEventListener("click", closeCompanyModal)
+    closeModal.addEventListener("click", closeCompanyModal);
     window.addEventListener("click", (e) => {
       if (e.target === modal) {
-        closeCompanyModal()
+        closeCompanyModal();
       }
-    })
+    });
 
     // Escape key to close modal
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && modal.style.display === "block") {
-        closeCompanyModal()
+        closeCompanyModal();
       }
-    })
+    });
 
     // Mobile menu
-    hamburger.addEventListener("click", toggleMobileMenu)
-
-    // Close mobile menu when clicking outside
-    document.addEventListener("click", (e) => {
-      if (navList.classList.contains("active") && !e.target.closest(".navbar") && !e.target.closest(".hamburger")) {
-        toggleMobileMenu()
-      }
-    })
-
-    // Close mobile menu when window is resized to desktop
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 768 && navList.classList.contains("active")) {
-        toggleMobileMenu()
-      }
-    })
+    hamburgerBtn.addEventListener("click", toggleMobileMenu);
   }
 
   // Initialize the directory
-  initDirectory()
-})
+  initDirectory();
+});
