@@ -415,6 +415,8 @@ footer {
 }
 
 .footer-map iframe {
+  /* width: 400; 
+  height: 300; */
   width: 100%;
   height: 100%;
   border: none;
@@ -1721,4 +1723,9 @@ textarea {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Adding iframe border style that was previously inline */
+iframe {
+  border: 0;
 }

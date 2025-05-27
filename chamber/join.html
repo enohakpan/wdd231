@@ -264,106 +264,14 @@
                 </div>
             </div>
             <div class="footer-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-123.4567!3d47.5678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDM0JzA0LjEiTiAxMjPCsDI3JzI0LjEiVw!5e0!3m2!1sen!2sus!4v1234567890!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-123.4567!3d47.5678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDM0JzA0LjEiTiAxMjPCsDI3JzI0LjEiVw!5e0!3m2!1sen!2sus!4v1234567890!5m2!1sen!2sus" width="400" height="300" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <span id="current-year"></span> Dash Chamber of Commerce | Last Updated: <span id="last-updated"></span></p>
+            <p>&copy; <span id="current-year"></span> Dash-Dash Chamber of Commerce | Last Updated: <span id="last-updated"></span></p>
         </div>
     </footer>
 
     <script src="scripts/script.js"></script>
-    <script>
-        // Set the timestamp when the form loads
-        document.getElementById('timestamp').value = new Date().toISOString();
-        
-        // Multi-step form functionality
-        const formPages = document.querySelectorAll('.form-page');
-        const nextButtons = document.querySelectorAll('.next-btn');
-        const prevButtons = document.querySelectorAll('.prev-btn');
-        const progressSteps = document.querySelectorAll('.progress-step');
-        
-        // Next button functionality
-        nextButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const currentPage = button.closest('.form-page');
-                const currentIndex = Array.from(formPages).indexOf(currentPage);
-                
-                // Validate current page fields
-                const inputs = currentPage.querySelectorAll('input[required], select[required]');
-                let isValid = true;
-                
-                inputs.forEach(input => {
-                    if (!input.checkValidity()) {
-                        input.reportValidity();
-                        isValid = false;
-                    }
-                });
-                
-                if (isValid) {
-                    // Move to next page
-                    currentPage.classList.remove('active');
-                    formPages[currentIndex + 1].classList.add('active');
-                    
-                    // Update progress steps
-                    progressSteps[currentIndex].classList.add('completed');
-                    progressSteps[currentIndex + 1].classList.add('active');
-                }
-            });
-        });
-        
-        // Previous button functionality
-        prevButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const currentPage = button.closest('.form-page');
-                const currentIndex = Array.from(formPages).indexOf(currentPage);
-                
-                // Move to previous page
-                currentPage.classList.remove('active');
-                formPages[currentIndex - 1].classList.add('active');
-                
-                // Update progress steps
-                progressSteps[currentIndex].classList.remove('active');
-                progressSteps[currentIndex - 1].classList.add('active');
-            });
-        });
-        
-        // Modal functionality
-        const modals = document.querySelectorAll('.modal');
-        const modalLinks = document.querySelectorAll('.info-btn');
-        const closeButtons = document.querySelectorAll('.close-modal');
-        
-        modalLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const modalId = link.getAttribute('href');
-                document.querySelector(modalId).style.display = 'block';
-            });
-        });
-        
-        closeButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                button.closest('.modal').style.display = 'none';
-            });
-        });
-        
-        window.addEventListener('click', (e) => {
-            modals.forEach(modal => {
-                if (e.target === modal) {
-                    modal.style.display = 'none';
-                }
-            });
-        });
-        
-        // Animation for membership cards
-        document.addEventListener('DOMContentLoaded', () => {
-            const cards = document.querySelectorAll('.membership-card');
-            cards.forEach((card, index) => {
-                setTimeout(() => {
-                    card.classList.add('show');
-                }, 200 * index);
-            });
-        });
-    </script>
 </body>
 </html>
