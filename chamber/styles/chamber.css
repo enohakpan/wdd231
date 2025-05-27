@@ -1724,3 +1724,30 @@ textarea {
 iframe {
   border: 0;
 }
+.header-title {
+  font-size: 1.2rem;
+  color: var(--light-color);
+  margin: 0;
+  font-weight: bold;
+  font-family: var(--header-font);
+}
+
+main h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+/* For screen readers only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
