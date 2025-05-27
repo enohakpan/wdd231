@@ -779,6 +779,10 @@ footer {
   padding: 2rem 1rem;
 }
 
+.join-hero-content h2 {
+  color: white;
+}
+
 .join-intro {
   text-align: center;
   margin-bottom: 2rem;
@@ -1271,8 +1275,8 @@ textarea {
 }
 
 .np-card::before { background-color: #6c757d; }
-.bronze-card::before { background-color: #cd7f32; }
-.silver-card::before { background-color: #c0c0c0; }
+.bronze-card::before { background-color: #664019; }
+.silver-card::before { background-color: #535252; }
 .gold-card::before { background-color: #ffd700; }
 
 .card-icon {
@@ -1289,8 +1293,8 @@ textarea {
 }
 
 .np-card .card-icon { background-color: #6c757d; }
-.bronze-card .card-icon { background-color: #cd7f32; }
-.silver-card .card-icon { background-color: #c0c0c0; }
+.bronze-card .card-icon { background-color: #965e26; }
+.silver-card .card-icon { background-color: #5c5a5a; }
 .gold-card .card-icon { background-color: #ffd700; color: #212529; }
 
 .membership-card.show {
@@ -1740,6 +1744,29 @@ main h1 {
 }
 
 /* For screen readers only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+.membership-heading {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+main h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
