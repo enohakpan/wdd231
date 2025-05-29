@@ -1,114 +1,54 @@
-// Main JavaScript
+// Main JavaScript for Chamber of Commerce site
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Toggle mobile menu
+    // Mobile menu toggle
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const primaryNav = document.getElementById('primary-nav');
-
-    hamburgerBtn.addEventListener('click', () => {
-        primaryNav.classList.toggle('open');
-    });
-
-    // Update copyright year and last modified date
+    
+    if (hamburgerBtn && primaryNav) {
+        hamburgerBtn.addEventListener('click', () => {
+            primaryNav.classList.toggle('open');
+            const isExpanded = primaryNav.classList.contains('open');
+            hamburgerBtn.setAttribute('aria-expanded', isExpanded);
+        });
+    }
+    
+    // Update copyright year
     const currentYearElement = document.getElementById('current-year');
-    const lastUpdatedElement = document.getElementById('last-updated');
-
     if (currentYearElement) {
         currentYearElement.textContent = new Date().getFullYear();
     }
-
+    
+    // Update last modified date
+    const lastUpdatedElement = document.getElementById('last-updated');
     if (lastUpdatedElement) {
         lastUpdatedElement.textContent = document.lastModified;
     }
-});
-
-
-// Set the timestamp when the form loads
-document.getElementById('timestamp').value = new Date().toISOString();
-
-// Multi-step form functionality
-const formPages = document.querySelectorAll('.form-page');
-const nextButtons = document.querySelectorAll('.next-btn');
-const prevButtons = document.querySelectorAll('.prev-btn');
-const progressSteps = document.querySelectorAll('.progress-step');
-
-// Next button functionality
-nextButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const currentPage = button.closest('.form-page');
-        const currentIndex = Array.from(formPages).indexOf(currentPage);
-
-        // Validate current page fields
-        const inputs = currentPage.querySelectorAll('input[required], select[required]');
-        let isValid = true;
-
-        inputs.forEach(input => {
-            if (!input.checkValidity()) {
-                input.reportValidity();
-                isValid = false;
-            }
+    
+    // Add active class to current page in navigation
+    const currentPage = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('#primary-nav a');
+    
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+            link.setAttribute('aria-current', 'page');
+        } else {
+            link.classList.remove('active');
+            link.removeAttribute('aria-current');
+        }
+    });
+    
+    // Lazy load images for better performance
+    if ('loading' in HTMLImageElement.prototype) {
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        images.forEach(img => {
+            img.src = img.dataset.src;
         });
-
-        if (isValid) {
-            // Move to next page
-            currentPage.classList.remove('active');
-            formPages[currentIndex + 1].classList.add('active');
-
-            // Update progress steps
-            progressSteps[currentIndex].classList.add('completed');
-            progressSteps[currentIndex + 1].classList.add('active');
-        }
-    });
-});
-
-// Previous button functionality
-prevButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const currentPage = button.closest('.form-page');
-        const currentIndex = Array.from(formPages).indexOf(currentPage);
-
-        // Move to previous page
-        currentPage.classList.remove('active');
-        formPages[currentIndex - 1].classList.add('active');
-
-        // Update progress steps
-        progressSteps[currentIndex].classList.remove('active');
-        progressSteps[currentIndex - 1].classList.add('active');
-    });
-});
-
-// Modal functionality
-const modals = document.querySelectorAll('.modal');
-const modalLinks = document.querySelectorAll('.info-btn');
-const closeButtons = document.querySelectorAll('.close-modal');
-
-modalLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const modalId = link.getAttribute('href');
-        document.querySelector(modalId).style.display = 'block';
-    });
-});
-
-closeButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        button.closest('.modal').style.display = 'none';
-    });
-});
-
-window.addEventListener('click', (e) => {
-    modals.forEach(modal => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-});
-
-// Animation for membership cards
-document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.membership-card');
-    cards.forEach((card, index) => {
-        setTimeout(() => {
-            card.classList.add('show');
-        }, 200 * index);
-    });
+    } else {
+        // Fallback for browsers that don't support lazy loading
+        const script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+        document.body.appendChild(script);
+    }
 });
