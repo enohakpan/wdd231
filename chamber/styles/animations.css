@@ -1,0 +1,77 @@
+/* CSS Animations and Transitions for join.html */
+
+/* Modal animation */
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+dialog {
+  animation: modalOpen 0.4s ease-out;
+}
+
+/* Button hover transition */
+.info-btn {
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Membership card hover effects */
+.membership-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.membership-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Card icon animation */
+.card-icon {
+  transition: transform 0.3s ease;
+}
+
+.membership-card:hover .card-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Form progress steps animation */
+.progress-step {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.progress-line {
+  transition: background-color 0.5s ease;
+}
+
+/* Form page transitions */
+.form-page {
+  transition: opacity 0.4s ease;
+  opacity: 0;
+  display: none;
+}
+
+.form-page.active {
+  opacity: 1;
+  display: block;
+}
+
+/* Close button hover effect */
+dialog button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+dialog button:hover {
+  background-color: #f8f9fa;
+  transform: rotate(90deg);
+}
