@@ -1,0 +1,82 @@
+/* Mobile menu responsiveness fixes */
+
+/* Improve hamburger button */
+#hamburger-btn {
+  display: block;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 101;
+}
+
+/* Mobile navigation styles */
+@media screen and (max-width: 767px) {
+  #primary-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    display: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+  
+  #primary-nav.open {
+    display: flex;
+    flex-direction: column;
+    animation: slideDown 0.3s ease-in-out;
+  }
+  
+  #primary-nav li {
+    width: 100%;
+  }
+  
+  #primary-nav a {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  #primary-nav a:hover, 
+  #primary-nav a.active {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Desktop navigation styles */
+@media screen and (min-width: 768px) {
+  #hamburger-btn {
+    display: none;
+  }
+  
+  #primary-nav {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    box-shadow: none;
+  }
+  
+  #primary-nav li {
+    margin: 0 0.5rem;
+  }
+  
+  #primary-nav a {
+    border: none;
+    padding: 0.75rem 1rem;
+  }
+}

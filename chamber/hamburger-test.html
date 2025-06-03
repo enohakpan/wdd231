@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamburger Test</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      background-color: #1a2a3a;
+      color: white;
+      padding: 1rem;
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    #hamburger-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    
+    #menu-icon {
+      width: 30px;
+      height: 30px;
+    }
+    
+    #primary-nav {
+      display: none;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    #primary-nav.open {
+      display: block;
+    }
+    
+    #primary-nav li {
+      padding: 0.5rem 0;
+    }
+    
+    #primary-nav a {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div>Hamburger Test</div>
+      <button id="hamburger-btn">
+        <img src="images/menu-removebg-preview.png" alt="Menu" id="menu-icon">
+      </button>
+    </div>
+    <nav>
+      <ul id="primary-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <h1>Hamburger Menu Test</h1>
+    <p>Click the hamburger icon to test the menu.</p>
+  </main>
+  
+  <script>
+    // Ultra simple hamburger menu script
+    window.onload = function() {
+      var hamburgerBtn = document.getElementById('hamburger-btn');
+      var primaryNav = document.getElementById('primary-nav');
+      
+      hamburgerBtn.onclick = function() {
+        primaryNav.classList.toggle('open');
+        console.log('Menu toggled');
+        return false;
+      };
+    };
+  </script>
+</body>
+</html>

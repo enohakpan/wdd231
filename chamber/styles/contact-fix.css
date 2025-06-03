@@ -1,0 +1,6 @@
+/* Fix color contrast for contact links */
+.footer-address a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: underline;
+}

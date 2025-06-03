@@ -1,16 +1,19 @@
 // Main JavaScript for Chamber of Commerce site
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile menu toggle
+    // Mobile menu toggle - FIXED VERSION
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const primaryNav = document.getElementById('primary-nav');
     
     if (hamburgerBtn && primaryNav) {
-        hamburgerBtn.addEventListener('click', () => {
+        // Direct onclick handler instead of addEventListener
+        hamburgerBtn.onclick = function() {
             primaryNav.classList.toggle('open');
             const isExpanded = primaryNav.classList.contains('open');
             hamburgerBtn.setAttribute('aria-expanded', isExpanded);
-        });
+            console.log('Hamburger clicked, menu toggled');
+            return false; // Prevent default behavior
+        };
     }
     
     // Update copyright year

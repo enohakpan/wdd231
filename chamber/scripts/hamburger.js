@@ -1,4 +1,4 @@
-// Add hamburger menu functionality to directory page
+// Hamburger menu functionality
 document.addEventListener('DOMContentLoaded', function() {
   var hamburgerBtn = document.getElementById('hamburger-btn');
   var primaryNav = document.getElementById('primary-nav');

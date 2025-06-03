@@ -1,0 +1,21 @@
+/* Direct menu styling */
+#primary-nav {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  #hamburger-btn {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) {
+  #primary-nav {
+    display: flex;
+  }
+  
+  #hamburger-btn {
+    display: none;
+  }
+}

@@ -1,0 +1,8 @@
+/* Simple menu fix */
+#primary-nav {
+  display: none;
+}
+
+#primary-nav.open {
+  display: flex;
+}

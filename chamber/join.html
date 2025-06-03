@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join Us | Dash-Dash Chamber of Commerce</title>
-    <meta name="description" content="Apply to join the Dash Chamber of Commerce through our membership application form">
+    <meta name="description"
+        content="Apply to join the Dash Chamber of Commerce through our membership application form">
     <meta name="author" content="Enoh Uwem Akpan">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/normalize.css">
@@ -14,17 +16,24 @@
     <link rel="stylesheet" href="styles/modal.css">
     <link rel="stylesheet" href="styles/fix-contrast.css">
     <link rel="stylesheet" href="styles/form-fix.css">
-    <link rel="stylesheet" href="styles/animation-fix.css">
+    <link rel="stylesheet" href="styles/contact-fix.css">
+    <link rel="stylesheet" href="styles/menu-fix.css">
+    <link rel="stylesheet" href="styles/card-animation.css">
+    <link rel="stylesheet" href="styles/header-fix.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Join the Dash-Dash Chamber of Commerce">
-    <meta property="og:description" content="Become a member of the Dash-Dash Chamber of Commerce. Choose from different membership levels and enjoy benefits like networking, promotion, and business resources.">
+    <meta property="og:description"
+        content="Become a member of the Dash-Dash Chamber of Commerce. Choose from different membership levels and enjoy benefits like networking, promotion, and business resources.">
     <meta property="og:image" content="https://enohakpan.github.io/wdd231/chamber/images/logo.png">
     <meta property="og:url" content="https://enohakpan.github.io/wdd231/chamber/join.html">
 </head>
+
 <body>
     <header>
         <div class="header-content">
@@ -63,61 +72,68 @@
                 <div class="progress-line"></div>
                 <div class="progress-step" data-step="3">3</div>
             </div>
-            
+
             <form method="get" action="thankyou.html" id="join-form">
                 <div class="form-page active" id="page-1">
                     <h2>Personal Information</h2>
                     <p class="form-intro">Tell us about yourself</p>
-                    
+
                     <div class="form-group">
                         <label for="first-name">First Name*</label>
-                        <input type="text" id="first-name" name="first-name" required autocomplete="given-name" title="Please enter your first name">
+                        <input type="text" id="first-name" name="first-name" required autocomplete="given-name"
+                            title="Please enter your first name">
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="last-name">Last Name*</label>
-                        <input type="text" id="last-name" name="last-name" required autocomplete="family-name" title="Please enter your last name">
+                        <input type="text" id="last-name" name="last-name" required autocomplete="family-name"
+                            title="Please enter your last name">
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="title">Position/Title</label>
-                        <input type="text" id="title" name="title" pattern="[A-Za-z\s\-]{7,}" autocomplete="organization-title" title="Please enter your position (minimum 7 characters, only letters, hyphens, and spaces)">
+                        <input type="text" id="title" name="title" pattern="[A-Za-z\s\-]{7,}"
+                            autocomplete="organization-title"
+                            title="Please enter your position (minimum 7 characters, only letters, hyphens, and spaces)">
                     </div>
-                    
+
                     <div class="form-buttons">
                         <button type="button" class="next-btn">Continue</button>
                     </div>
                 </div>
-                
+
                 <div class="form-page" id="page-2">
                     <h2>Contact Details</h2>
                     <p class="form-intro">How can we reach you?</p>
-                    
+
                     <div class="form-group">
                         <label for="email">Email*</label>
-                        <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@domain.com" title="Please enter a valid email address">
+                        <input type="email" id="email" name="email" required autocomplete="email"
+                            placeholder="johndoe@example.com" title="Please enter a valid email address">
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="phone">Phone Number*</label>
-                        <input type="tel" id="phone" name="phone" required autocomplete="tel" title="Please enter your phone number">
+                        <input type="tel" id="phone" name="phone" required autocomplete="tel"
+                            title="Please enter your phone number">
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="business-name">Business/Organization Name*</label>
-                        <input type="text" id="business-name" name="business-name" required autocomplete="organization" title="Please enter your business or organization name">
+                        <input type="text" id="business-name" name="business-name" required autocomplete="organization"
+                            title="Please enter your business or organization name">
                     </div>
-                    
+
                     <div class="form-buttons">
                         <button type="button" class="prev-btn">Back</button>
                         <button type="button" class="next-btn">Continue</button>
                     </div>
                 </div>
-                
+
                 <div class="form-page" id="page-3">
                     <h2>Membership Details</h2>
                     <p class="form-intro">Choose your membership level</p>
-                    
+
                     <div class="form-group membership-select">
                         <p class="membership-heading">Membership Level*</p>
                         <div class="membership-options-select">
@@ -139,14 +155,15 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="business-description">Business Description</label>
-                        <textarea id="business-description" name="business-description" title="Please provide a brief description of your business"></textarea>
+                        <textarea id="business-description" name="business-description"
+                            title="Please provide a brief description of your business"></textarea>
                     </div>
-                    
+
                     <input type="hidden" id="timestamp" name="timestamp">
-                    
+
                     <div class="form-buttons">
                         <button type="button" class="prev-btn">Back</button>
                         <button type="submit" class="submit-btn">Submit Application</button>
@@ -154,7 +171,7 @@
                 </div>
             </form>
         </section>
-        
+
         <section class="membership-benefits">
             <h2>Membership Benefits</h2>
             <div class="benefits-container">
@@ -165,7 +182,7 @@
                     <p class="price">Free</p>
                     <button class="info-btn">View Benefits</button>
                 </div>
-                
+
                 <div class="membership-card bronze-card">
                     <div class="card-icon">B</div>
                     <h3>Bronze Membership</h3>
@@ -173,7 +190,7 @@
                     <p class="price">$50/yr</p>
                     <button class="info-btn">View Benefits</button>
                 </div>
-                
+
                 <div class="membership-card silver-card">
                     <div class="card-icon">S</div>
                     <h3>Silver Membership</h3>
@@ -181,7 +198,7 @@
                     <p class="price">$100/yr</p>
                     <button class="info-btn">View Benefits</button>
                 </div>
-                
+
                 <div class="membership-card gold-card">
                     <div class="card-icon">G</div>
                     <h3>Gold Membership</h3>
@@ -192,7 +209,7 @@
             </div>
         </section>
     </main>
-    
+
     <!-- Membership Level Modal Dialog -->
     <dialog id="courseDetails">
         <!-- Content will be populated by JavaScript -->
@@ -201,29 +218,34 @@
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="images/logo.png" alt="Dash Chamber of Commerce Logo" class="footer-logo-img" width="60" height="60">
+                <img src="images/logo.png" alt="Dash Chamber of Commerce Logo" class="footer-logo-img" width="60"
+                    height="60">
                 <div class="footer-address">
                     <h3>Dash Chamber of Commerce</h3>
                     <address>
                         <p>123 Business Ave, Dash City, ST 12345</p>
                         <p>Email: <a href="mailto:info@dashchamber.org">info@dashchamber.org</a></p>
-                        <p>Phone: <a href="tel:+15551234567">(555) 123-4567</a></p>
+                        <p>Phone: <a href="tel:+2349027554682">(234) 902-755-4682</a></p>
                     </address>
                 </div>
             </div>
             <div class="footer-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-123.4567!3d47.5678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDM0JzA0LjEiTiAxMjPCsDI3JzI0LjEiVw!5e0!3m2!1sen!2sus!4v1234567890!5m2!1sen!2sus" width="400" height="200" allowfullscreen="" loading="lazy" title="Google Maps location of Dash Chamber of Commerce"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-123.4567!3d47.5678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDM0JzA0LjEiTiAxMjPCsDI3JzI0LjEiVw!5e0!3m2!1sen!2sus!4v1234567890!5m2!1sen!2sus"
+                    width="400" height="200" allowfullscreen="" loading="lazy"
+                    title="Google Maps location of Dash Chamber of Commerce"></iframe>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <span id="current-year"></span> Dash-Dash Chamber of Commerce | Last Updated: <span id="last-updated"></span></p>
+            <p>&copy; <span id="current-year"></span> Dash-Dash Chamber of Commerce | Last Updated: <span
+                    id="last-updated"></span></p>
         </div>
     </footer>
 
-    <script src="scripts/script.js"></script>
+    <script src="scripts/hamburger.js"></script>
     <script src="scripts/modal.js"></script>
-    <script src="scripts/fix-navigation.js"></script>
     <script src="scripts/timestamp.js"></script>
     <script src="scripts/form-submit.js"></script>
 </body>
+
 </html>

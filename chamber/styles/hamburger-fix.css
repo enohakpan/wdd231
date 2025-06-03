@@ -1,0 +1,23 @@
+/* Ultra simple hamburger menu fix */
+#hamburger-btn {
+  cursor: pointer;
+  display: block;
+}
+
+#primary-nav {
+  display: none;
+}
+
+#primary-nav.open {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  #hamburger-btn {
+    display: none;
+  }
+  
+  #primary-nav {
+    display: flex;
+  }
+}
