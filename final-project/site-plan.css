@@ -1,0 +1,48 @@
+/* site-plan.css */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fffaf5; /* Soft Cream */
+  color: #333333; /* Charcoal Gray */
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #d35400; /* Burnt Orange */
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+img {
+  border: 2px solid #d35400;
+  max-width: 100%;
+  height: auto;
+  margin-top: 0.5rem;
+}
+
+/* Wireframe image styling */
+section h3 + img {
+  display: block;
+  max-width: 500px;
+  width: 90%;
+  margin: 1rem auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.mobile {
+  width: 200px;
+  height: 600px;
+}
+
+code {
+  background: #f3e8d9;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}

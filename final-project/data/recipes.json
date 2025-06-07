@@ -1,0 +1,646 @@
+[
+  {
+    "id": 1,
+    "name": "Jollof Rice",
+    "image": "images/recipes/jollof-rice.webp",
+    "ingredients": [
+      "2 cups long grain rice",
+      "1 can tomato paste",
+      "3 fresh tomatoes",
+      "1 onion",
+      "1 red bell pepper",
+      "Seasoning cubes",
+      "Salt and pepper",
+      "Vegetable oil"
+    ],
+    "steps": [
+      "Blend tomatoes, pepper, and onion into a smooth paste.",
+      "Heat oil in a pot and fry the tomato paste for 5 minutes.",
+      "Add the blended mix and fry until reduced and dark red.",
+      "Add seasoning, salt, and washed rice.",
+      "Add water, cover, and cook until rice is soft."
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Egusi Soup",
+    "image": "images/recipes/egusi-soup.jpeg",
+    "ingredients": [
+      "2 cups ground melon seeds",
+      "500g assorted meat",
+      "1 cup palm oil",
+      "1 onion",
+      "1 bunch spinach or bitterleaf",
+      "Seasoning cubes",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "Heat palm oil, add chopped onions and fry.",
+      "Add ground egusi and stir continuously.",
+      "Add meat stock and cook for 10 minutes.",
+      "Add meat, leaves, seasoning, salt and simmer."
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Fried Plantain",
+    "image": "images/recipes/fried-plantain.jpeg",
+    "ingredients": [
+      "3 ripe plantains",
+      "Vegetable oil",
+      "Salt (optional)"
+    ],
+    "steps": [
+      "Peel and slice plantains diagonally.",
+      "Heat oil in a frying pan.",
+      "Fry plantains until golden brown on both sides.",
+      "Drain excess oil and serve."
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Ofada Sauce",
+    "image": "images/recipes/ofada.jpeg",
+    "ingredients": [
+      "2 cups green bell peppers",
+      "1 cup red bell peppers",
+      "Assorted meat",
+      "1 onion",
+      "Palm oil",
+      "Locust beans",
+      "Salt and seasoning"
+    ],
+    "steps": [
+      "Blend peppers and onions coarsely.",
+      "Heat palm oil until bleached.",
+      "Add locust beans and blended mix.",
+      "Add meat and seasoning.",
+      "Cook until oil floats and sauce thickens."
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Afang Soup",
+    "image": "images/recipes/afang-soup.jpeg",
+    "ingredients": [
+      "1 bunch afang leaves",
+      "1 bunch waterleaf",
+      "500g assorted meat",
+      "1 cup periwinkle",
+      "2 tablespoons ground crayfish",
+      "Seasoning cubes",
+      "Palm oil"
+    ],
+    "steps": [
+      "Boil meat with seasoning.",
+      "Add chopped waterleaf and cook.",
+      "Add afang leaves, periwinkle, crayfish, and palm oil.",
+      "Simmer until thick and well combined."
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Moi Moi",
+    "image": "images/recipes/moi-moi.jpeg",
+    "ingredients": [
+      "2 cups peeled beans",
+      "1 red bell pepper",
+      "1 onion",
+      "1 cup vegetable oil",
+      "Seasoning cubes",
+      "Salt",
+      "Boiled eggs (optional)"
+    ],
+    "steps": [
+      "Blend beans, pepper, and onion into a smooth paste.",
+      "Add oil, seasoning, and salt.",
+      "Pour into containers and add egg if using.",
+      "Steam for 45 minutes until firm."
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Efo Riro",
+    "image": "images/recipes/efo-riro.jpeg",
+    "ingredients": [
+      "1 bunch spinach",
+      "1 red bell pepper",
+      "1 onion",
+      "Palm oil",
+      "Assorted meat or fish",
+      "Locust beans",
+      "Seasoning"
+    ],
+    "steps": [
+      "Blend pepper and onion.",
+      "Heat oil and fry mixture with locust beans.",
+      "Add meat, seasoning, and cook.",
+      "Add chopped spinach and simmer."
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Okra Soup",
+    "image": "images/recipes/okra-soup.jpeg",
+    "ingredients": [
+      "2 cups chopped okra",
+      "500g assorted meat",
+      "1/2 cup ground crayfish",
+      "Palm oil",
+      "1 bunch ugu leaves",
+      "Seasoning",
+      "Salt"
+    ],
+    "steps": [
+      "Boil meat and season.",
+      "Add palm oil, crayfish, and okra.",
+      "Cook for 10 minutes, then add ugu.",
+      "Simmer until soup is thick and okra is soft."
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Nkwobi",
+    "image": "images/recipes/nkwobi.jpeg",
+    "ingredients": [
+      "Cow foot",
+      "Palm oil",
+      "Potash",
+      "Utazi leaves",
+      "Seasoning",
+      "Crayfish",
+      "Pepper"
+    ],
+    "steps": [
+      "Boil cow foot until tender.",
+      "Mix potash in water, add to palm oil.",
+      "Stir till thick, add crayfish, pepper, and meat.",
+      "Garnish with utazi and serve."
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Pepper Soup",
+    "image": "images/recipes/pepper-soup.jpeg",
+    "ingredients": [
+      "Goat meat or catfish",
+      "Pepper soup spices",
+      "Scent leaves",
+      "Onion",
+      "Seasoning",
+      "Salt"
+    ],
+    "steps": [
+      "Boil meat or fish with onion and seasoning.",
+      "Add pepper soup spices and cook well.",
+      "Add scent leaves and simmer for a few minutes."
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Tuwo Shinkafa",
+    "image": "images/recipes/tuwo-shinkafa.jpeg",
+    "ingredients": [
+      "2 cups short-grain rice",
+      "Water"
+    ],
+    "steps": [
+      "Cook rice with plenty of water until very soft.",
+      "Mash and stir continuously until smooth.",
+      "Mold into balls and serve with soup."
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Miyan Kuka",
+    "image": "images/recipes/miyan-kuka.jpeg",
+    "ingredients": [
+      "Baobab leaf powder (kuka)",
+      "Assorted meat",
+      "Palm oil",
+      "Seasoning",
+      "Dry fish",
+      "Pepper"
+    ],
+    "steps": [
+      "Boil meat and dry fish with seasoning.",
+      "Add palm oil and pepper.",
+      "Sprinkle in kuka while stirring.",
+      "Simmer until thickened."
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Banga Soup",
+    "image": "images/recipes/banga-soup.jpeg",
+    "ingredients": [
+      "Palm fruit concentrate",
+      "Catfish or meat",
+      "Banga spices",
+      "Scent leaves",
+      "Seasoning"
+    ],
+    "steps": [
+      "Boil palm fruit extract with meat or fish.",
+      "Add spices and cook until thick.",
+      "Add scent leaves and simmer."
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Edikaikong",
+    "image": "images/recipes/edikang-ikong.jpeg",
+    "ingredients": [
+      "Waterleaf",
+      "Ugu (fluted pumpkin) leaves",
+      "Periwinkle",
+      "Assorted meat",
+      "Palm oil",
+      "Crayfish",
+      "Seasoning"
+    ],
+    "steps": [
+      "Cook meat and periwinkle with seasoning.",
+      "Add waterleaf and cook.",
+      "Stir in ugu and palm oil.",
+      "Simmer until thick."
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Yam Porridge",
+    "image": "images/recipes/yam-porridge.jpeg",
+    "ingredients": [
+      "Yam cubes",
+      "Palm oil",
+      "Crayfish",
+      "Vegetables",
+      "Pepper",
+      "Seasoning"
+    ],
+    "steps": [
+      "Boil yam with pepper and seasoning.",
+      "Add palm oil and crayfish.",
+      "Mash part of the yam.",
+      "Add vegetables and stir."
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Peppered Snails",
+    "image": "images/recipes/peppered-snails.jpg",
+    "ingredients": [
+      "Snails",
+      "Pepper",
+      "Onion",
+      "Seasoning",
+      "Vegetable oil"
+    ],
+    "steps": [
+      "Clean snails thoroughly.",
+      "Boil with pepper and seasoning.",
+      "Heat oil, fry onions, and add snails.",
+      "Stir-fry until well coated."
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Akara",
+    "image": "images/recipes/akara.jpg",
+    "ingredients": [
+      "2 cups black-eyed peas",
+      "1 onion",
+      "Pepper",
+      "Salt",
+      "Vegetable oil"
+    ],
+    "steps": [
+      "Soak and peel black-eyed peas.",
+      "Blend with onion and pepper into a smooth paste.",
+      "Heat oil in a frying pan.",
+      "Scoop batter and fry until golden brown."
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Bitterleaf Soup",
+    "image": "images/recipes/bitterleaf-soup.jpg",
+    "ingredients": [
+      "Bitterleaf",
+      "Assorted meat",
+      "Palm oil",
+      "Ground crayfish",
+      "Seasoning",
+      "Pepper"
+    ],
+    "steps": [
+      "Boil meat with seasoning and pepper.",
+      "Add palm oil and ground crayfish.",
+      "Stir in washed bitterleaf.",
+      "Simmer until well combined."
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Pepper Sauce",
+    "image": "images/recipes/pepper-sauce.jpg",
+    "ingredients": [
+      "Red bell peppers",
+      "Onion",
+      "Vegetable oil",
+      "Seasoning",
+      "Salt"
+    ],
+    "steps": [
+      "Blend peppers and onions into a paste.",
+      "Heat oil in a pan, add the blended mix.",
+      "Cook until oil separates and sauce thickens.",
+      "Season with salt and serve."
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Nkwobi (Traditional)",
+    "image": "images/recipes/nkwobi.jpeg",
+    "ingredients": [
+      "Cow foot",
+      "Palm oil",
+      "Potash",
+      "Utazi leaves",
+      "Seasoning",
+      "Crayfish",
+      "Pepper"
+    ],
+    "steps": [
+      "Boil cow foot until tender.",
+      "Mix potash in water, add to palm oil.",
+      "Stir till thick, add crayfish, pepper, and meat.",
+      "Garnish with utazi and serve."
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Catfish Pepper Soup",
+    "image": "images/recipes/catfish-pepper-soup.jpg",
+    "ingredients": [
+      "Catfish",
+      "Pepper soup spices",
+      "Scent leaves",
+      "Onion",
+      "Seasoning",
+      "Salt"
+    ],
+    "steps": [
+      "Clean catfish and cut into pieces.",
+      "Boil with onion and seasoning.",
+      "Add pepper soup spices and cook well.",
+      "Add scent leaves and simmer for a few minutes."
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Peppered Chicken",
+    "image": "images/recipes/peppered-chicken.jpeg",
+    "ingredients": [
+      "Chicken pieces",
+      "Pepper",
+      "Onion",
+      "Seasoning",
+      "Vegetable oil"
+    ],
+    "steps": [
+      "Marinate chicken with pepper, onion, and seasoning.",
+      "Heat oil in a pan and fry the chicken until golden brown.",
+      "Serve hot with your choice of side."
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Peppered Goat Meat",
+    "image": "images/recipes/peppered-goat-meat.jpg",
+    "ingredients": [
+      "Goat meat",
+      "Pepper",
+      "Onion",
+      "Seasoning",
+      "Vegetable oil"
+    ],
+    "steps": [
+      "Boil goat meat with seasoning until tender.",
+      "Heat oil, fry onions, and add pepper.",
+      "Add the boiled meat and stir-fry until well coated."
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Peppered Fish",
+    "image": "images/recipes/peppered-fish.jpg",
+    "ingredients": [
+      "Fish (tilapia or catfish)",
+      "Pepper",
+      "Onion",
+      "Seasoning",
+      "Vegetable oil"
+    ],
+    "steps": [
+      "Clean fish and marinate with pepper, onion, and seasoning.",
+      "Heat oil in a pan and fry the fish until golden brown.",
+      "Serve hot with your choice of side."
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Beans and Corn Porridge (Adalu)",
+    "image": "images/recipes/beans-and-corn.jpeg",
+    "ingredients": [
+      "2 cups beans",
+      "1.5 cups corn (fresh or boiled)",
+      "Palm oil",
+      "1 onion",
+      "Seasoning",
+      "Pepper"
+    ],
+    "steps": [
+      "Cook beans until almost tender.",
+      "Add corn and continue cooking.",
+      "Add palm oil, chopped onions, pepper, and seasoning.",
+      "Simmer until soft and thick."
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Ukodo (Yam Pepper Soup)",
+    "image": "images/recipes/ukodo.jpeg",
+    "ingredients": [
+      "Yam",
+      "Goat meat or catfish",
+      "Pepper soup spice",
+      "Scent leaves",
+      "Seasoning"
+    ],
+    "steps": [
+      "Boil goat meat or fish with seasoning.",
+      "Add sliced yam and cook until soft.",
+      "Add pepper soup spices and scent leaves.",
+      "Simmer until flavors blend."
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Abacha (African Salad)",
+    "image": "images/recipes/abacha.jpeg",
+    "ingredients": [
+      "Abacha (dried cassava flakes)",
+      "Palm oil",
+      "Ugba (oil bean)",
+      "Onions",
+      "Crayfish",
+      "Pepper",
+      "Seasoning",
+      "Potash"
+    ],
+    "steps": [
+      "Soak abacha in hot water and drain.",
+      "Mix palm oil and potash water to form a paste.",
+      "Add crayfish, pepper, ugba, and seasoning.",
+      "Stir in abacha and garnish with onions."
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Oha Soup",
+    "image": "images/recipes/oha-soup.jpeg",
+    "ingredients": [
+      "Oha leaves",
+      "Cocoyam paste",
+      "Palm oil",
+      "Assorted meat",
+      "Stockfish",
+      "Seasoning",
+      "Crayfish"
+    ],
+    "steps": [
+      "Boil meat and stockfish with seasoning.",
+      "Add palm oil and crayfish.",
+      "Add cocoyam paste to thicken.",
+      "Stir in oha leaves and simmer."
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Fisherman Soup",
+    "image": "images/recipes/fisherman-soup.jpeg",
+    "ingredients": [
+      "Fresh fish",
+      "Prawns",
+      "Periwinkle",
+      "Palm oil",
+      "Crayfish",
+      "Scent leaves",
+      "Pepper and seasoning"
+    ],
+    "steps": [
+      "Clean and season seafood, cook until tender.",
+      "Add palm oil, crayfish, and pepper.",
+      "Simmer and finish with scent leaves."
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Plantain Frittata",
+    "image": "images/recipes/plantain-frittatta.jpeg",
+    "ingredients": [
+      "Ripe plantains",
+      "Eggs",
+      "Bell peppers",
+      "Onion",
+      "Salt and seasoning",
+      "Vegetable oil"
+    ],
+    "steps": [
+      "Fry sliced plantains until golden.",
+      "Whisk eggs with vegetables and seasoning.",
+      "Layer plantains in baking dish and pour egg mix.",
+      "Bake until set and golden."
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Achicha (Dry Cocoyam Porridge)",
+    "image": "images/recipes/achicha.jpeg",
+    "ingredients": [
+      "Dry cocoyam flakes",
+      "Palm oil",
+      "Ugba (oil bean)",
+      "Crayfish",
+      "Seasoning",
+      "Pepper",
+      "Spinach or scent leaves"
+    ],
+    "steps": [
+      "Soak cocoyam flakes in warm water until soft.",
+      "Heat oil, add crayfish, ugba, and pepper.",
+      "Mix in cocoyam and seasoning.",
+      "Add leaves and stir till combined."
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Nigerian Meat Pie",
+    "image": "images/recipes/meat-pie.jpeg",
+    "ingredients": [
+      "Flour",
+      "Butter",
+      "Minced meat",
+      "Potatoes",
+      "Carrots",
+      "Onion",
+      "Seasoning"
+    ],
+    "steps": [
+      "Cook filling with meat, diced potatoes, and carrots.",
+      "Make dough and cut into circles.",
+      "Fill and seal each with filling.",
+      "Bake until golden brown."
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Ewa Agoyin",
+    "image": "images/recipes/ewa.jpeg",
+    "ingredients": [
+      "Beans",
+      "Palm oil",
+      "Dried pepper",
+      "Onion",
+      "Seasoning",
+      "Salt"
+    ],
+    "steps": [
+      "Cook beans until very soft and mash lightly.",
+      "Blend pepper and onion coarsely.",
+      "Heat palm oil and fry pepper mix until dark and aromatic.",
+      "Serve beans with sauce on top."
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Gizdodo",
+    "image": "images/recipes/gizdodo.jpeg",
+    "ingredients": [
+      "Diced plantains",
+      "Gizzards (boiled and diced)",
+      "Bell peppers",
+      "Onion",
+      "Tomatoes",
+      "Seasoning",
+      "Oil for frying"
+    ],
+    "steps": [
+      "Fry plantains until golden and set aside.",
+      "Sauté onions, peppers, and tomatoes.",
+      "Add cooked gizzard and plantains.",
+      "Stir and allow flavors to combine."
+    ]
+  }
+]

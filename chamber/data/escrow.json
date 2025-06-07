@@ -1,0 +1,49 @@
+{
+    "transactions": [
+        {
+            "id": "ESC-001",
+            "date": "2023-11-15",
+            "amount": 1500.00,
+            "status": "completed",
+            "description": "Business registration fee",
+            "sender": "Dash Financial Services",
+            "recipient": "Chamber of Commerce"
+        },
+        {
+            "id": "ESC-002",
+            "date": "2023-12-05",
+            "amount": 750.50,
+            "status": "pending",
+            "description": "Event sponsorship deposit",
+            "sender": "TechNova Solutions",
+            "recipient": "Chamber of Commerce"
+        },
+        {
+            "id": "ESC-003",
+            "date": "2024-01-20",
+            "amount": 2500.00,
+            "status": "completed",
+            "description": "Annual membership fee - Gold level",
+            "sender": "Dash Boutique",
+            "recipient": "Chamber of Commerce"
+        },
+        {
+            "id": "ESC-004",
+            "date": "2024-02-10",
+            "amount": 1200.00,
+            "status": "failed",
+            "description": "Trade show booth reservation",
+            "sender": "Green Harvest Organics",
+            "recipient": "Chamber of Commerce"
+        },
+        {
+            "id": "ESC-005",
+            "date": "2024-03-01",
+            "amount": 3000.00,
+            "status": "completed",
+            "description": "Community development fund contribution",
+            "sender": "Dash Digital Marketing",
+            "recipient": "Chamber of Commerce"
+        }
+    ]
+}

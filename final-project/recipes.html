@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipes - DishDash</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/medium.css" />
+  <link rel="stylesheet" href="styles/large.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>🍽️ DishDash</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="planner.html">Meal Planner</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <input type="text" id="searchInput" placeholder="Search for recipes..." />
+    </section>
+
+    <section class="recipe-results" id="recipeResults">
+      <!-- Recipes will be dynamically added here -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h3>🍽️ DishDash</h3>
+        <p>Discover the joy of cooking</p>
+      </div>
+      
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <ul class="contact-info">
+          <li><i class="fas fa-envelope"></i> dashdash59600@gmail.com</li>
+          <li><i class="fas fa-phone"></i> +2349027554682</li>
+          <li><i class="fas fa-map-marker-alt"></i> No.15 Sunrise Estate, Emene Enugu State, Nigeria</li>
+        </ul>
+      </div>
+      
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear">2023</span> DishDash. All Rights Reserved.</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+  <script>
+    // Update copyright year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    
+    // Update last modified date
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
+  <script src="scripts/recipes.js"></script>
+</body>
+</html>

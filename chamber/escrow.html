@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Escrow payment transactions in the Dash Chamber of Commerce.">
+  <meta name="keywords" content="Dash, Chamber of Commerce, Escrow, Payments, Transactions">
+  <meta name="author" content="Enoh Uwem Akpan">
+  <title>Escrow Payments | Dash Chamber of Commerce</title>
+
+  <!-- Normalize CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles/chamber.css">
+  <link rel="stylesheet" href="styles/medium.css" media="(min-width: 32.5em)">
+  <link rel="stylesheet" href="styles/large-chamber.css" media="(min-width: 64em)">
+  <link rel="stylesheet" href="styles/menu-fix.css">
+  <link rel="stylesheet" href="styles/escrow.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Escrow Payments | Dash Chamber of Commerce">
+  <meta property="og:description"
+    content="View your escrow payment transactions with the Dash Chamber of Commerce.">
+  <meta property="og:image" content="images/logo.png">
+  <meta property="og:url" content="https://enohakpan.github.io/wdd231/chamber/escrow.html">
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo-container">
+        <img src="images/logo.png" alt="Dash-Dash Chamber of Commerce Logo" class="logo" width="50" height="50">
+        <p class="header-title">Dash-Dash Chamber of Commerce</p>
+      </div>
+      <button id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+        <img src="images/menu-removebg-preview.png" alt="Menu" id="menu-icon" width="30" height="30">
+      </button>
+    </div>
+    <nav aria-label="Main navigation">
+      <ul id="primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="escrow.html" class="active" aria-current="page">Escrow</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="escrow-hero">
+    <div class="escrow-hero-content">
+      <h1>Escrow Payments</h1>
+      <p>View your escrow payment transactions with the Dash Chamber of Commerce.</p>
+    </div>
+  </div>
+
+  <main>
+    <div class="escrow-container">
+      <div id="escrow-transactions">
+        <!-- Escrow transactions will be loaded here via JavaScript -->
+        <div class="loading-spinner">
+          <i class="fas fa-spinner fa-spin"></i> Loading transactions...
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="Dash Chamber of Commerce Logo" class="footer-logo-img" width="60" height="60">
+        <div class="footer-address">
+          <h3>Dash Chamber of Commerce</h3>
+          <address>
+            <p>123 Business Ave, Dash City, ST 12345</p>
+            <p>Email: <a href="mailto:info@dash.org">info@dash.org</a></p>
+            <p>Phone: <a href="tel:+2349027554682">(234) 902-755-4682</a></p>
+          </address>
+        </div>
+      </div>
+      <div class="footer-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-123.4567!3d47.5678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDM0JzA0LjEiTiAxMjPCsDI3JzI0LjEiVw!5e0!3m2!1sen!2sus!4v1234567890!5m2!1sen!2sus"
+          width="400" height="200" allowfullscreen="" loading="lazy"
+          title="Google Maps location of Dash Chamber of Commerce"></iframe>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> Dash-Dash Chamber of Commerce | Last Updated: <span
+          id="last-updated"></span></p>
+    </div>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+  <script src="scripts/escrow.js"></script>
+</body>
+
+</html>

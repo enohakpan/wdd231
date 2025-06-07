@@ -1,0 +1,111 @@
+/* Escrow Page Styles */
+
+.escrow-hero {
+    background-color: #003366;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.escrow-hero h1 {
+    margin-bottom: 0.5rem;
+}
+
+.escrow-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Loading spinner */
+.loading-spinner {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.loading-spinner i {
+    margin-right: 0.5rem;
+    color: #003366;
+}
+
+/* Table styles */
+.escrow-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.escrow-table th,
+.escrow-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.escrow-table th {
+    background-color: #003366;
+    color: white;
+    font-weight: 600;
+}
+
+.escrow-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.escrow-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Status styles */
+.status-completed {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.status-pending {
+    color: #ffc107;
+    font-weight: 600;
+}
+
+.status-failed {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+/* No transactions message */
+.no-transactions-message {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.no-transactions-message i {
+    font-size: 3rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.no-transactions-message p {
+    font-size: 1.2rem;
+    color: #495057;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .escrow-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .escrow-table th,
+    .escrow-table td {
+        padding: 0.5rem;
+    }
+}

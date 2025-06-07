@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <!-- Plate -->
+  <g id="plate">
+    <circle cx="50" cy="50" r="40" fill="#f5f5f5" stroke="#ddd" stroke-width="2"/>
+    <circle cx="50" cy="50" r="35" fill="none" stroke="#ddd" stroke-width="1"/>
+  </g>
+  
+  <!-- Fork -->
+  <g id="fork">
+    <path d="M30,10 L30,40 L25,50 L35,50 L30,40 Z" fill="#d2b48c"/>
+    <path d="M30,50 L30,90" stroke="#d2b48c" stroke-width="3" stroke-linecap="round"/>
+    <path d="M20,10 L20,30 M30,10 L30,30 M40,10 L40,30" stroke="#d2b48c" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Spoon -->
+  <g id="spoon">
+    <ellipse cx="30" cy="15" rx="15" ry="10" fill="#d2b48c"/>
+    <path d="M30,15 L30,90" stroke="#d2b48c" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Knife -->
+  <g id="knife">
+    <path d="M30,10 L40,50 L35,55 L25,55 L20,50 Z" fill="#d2b48c"/>
+    <path d="M30,55 L30,90" stroke="#d2b48c" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Pot -->
+  <g id="pot">
+    <path d="M10,40 L70,40 L65,80 L15,80 Z" fill="#8b4513"/>
+    <path d="M20,40 L20,30 L60,30 L60,40" stroke="#8b4513" stroke-width="3"/>
+    <path d="M30,30 L30,20 L50,20 L50,30" stroke="#8b4513" stroke-width="3"/>
+  </g>
+  
+  <!-- Chef Hat -->
+  <g id="chef-hat">
+    <path d="M20,50 C20,30 40,30 40,50 C40,30 60,30 60,50 L60,70 L20,70 Z" fill="#f5f5f5" stroke="#ddd"/>
+  </g>
+  
+  <!-- Bowl -->
+  <g id="bowl">
+    <path d="M20,40 C20,20 60,20 60,40 L55,70 L25,70 Z" fill="#d2b48c"/>
+    <ellipse cx="40" cy="40" rx="20" ry="5" fill="#8b4513"/>
+  </g>
+</svg>

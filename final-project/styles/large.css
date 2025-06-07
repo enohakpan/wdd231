@@ -1,0 +1,95 @@
+/* Large screens (desktops) */
+@media screen and (min-width: 900px) {
+  .site-header {
+    padding: 1rem 4rem;
+  }
+
+  .site-header nav ul {
+    gap: 2rem;
+  }
+
+  .recipe-grid,
+  #favoritesGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .footer-content {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .hero {
+    padding: 6rem 2rem;
+    background-attachment: fixed;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%);
+    z-index: -1;
+  }
+
+  .featured-recipes,
+  .search-section,
+  .favorites-section,
+  .meal-planner {
+    padding: 3rem 4rem;
+  }
+
+  .modal-content {
+    max-width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    align-items: start;
+  }
+
+  #modalImage {
+    grid-row: span 3;
+    height: 100%;
+    max-height: 500px;
+  }
+
+  #modalTitle {
+    grid-column: 2;
+  }
+
+  #modalIngredients {
+    grid-column: 2;
+  }
+
+  #modalInstructions {
+    grid-column: 2;
+  }
+
+  /* Parallax effect for recipe cards */
+  .recipe-card {
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .recipe-card:hover {
+    transform: translateY(-15px) rotate(1deg);
+  }
+
+  /* Staggered entrance for recipe cards */
+  .recipe-card {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  .recipe-card.visible {
+    animation: cardEntrance 0.8s forwards;
+  }
+
+  @keyframes cardEntrance {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
