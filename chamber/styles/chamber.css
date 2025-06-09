@@ -54,8 +54,8 @@ img {
 header {
   background-color: var(--primary-color);
   color: var(--light-color);
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 0.5rem;
+  box-shadow: none;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -75,8 +75,8 @@ header {
 }
 
 .logo {
-  width: 50px;
-  margin-right: 1rem;
+  width: 40px;
+  margin-right: 0.75rem;
   border-radius: 4px;
 }
 
@@ -114,7 +114,7 @@ nav {
 
 #primary-nav a {
   display: block;
-  padding: 1rem;
+  padding: 0.75rem;
   color: var(--light-color);
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -130,9 +130,9 @@ nav {
 
 /* Main Content Styles */
 main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* Hero Section */
@@ -405,7 +405,7 @@ footer {
 .footer-address p {
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.95);
 }
 
 .footer-map {
@@ -427,9 +427,9 @@ footer {
   text-align: center;
   padding-top: 1rem;
   margin-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.95);
 }
 
 /* Mobile-first approach - events and weather stack on small screens */
@@ -1054,10 +1054,10 @@ textarea {
 /* Enhanced Join Page Styles */
 .join-hero {
   position: relative;
-  height: 300px;
+  height: 350px;
   background: linear-gradient(135deg, var(--primary-color), #0d6efd);
   overflow: hidden;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 .join-hero::before {
@@ -1737,7 +1737,7 @@ iframe {
   border: 0;
 }
 .header-title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--light-color);
   margin: 0;
   font-weight: bold;

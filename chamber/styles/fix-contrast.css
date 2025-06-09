@@ -1,32 +1,24 @@
-/* Fix color contrast issues */
-:root {
-  --primary-color: #0e1923; /* Darker blue for better contrast */
-  --secondary-color: #0052cc; /* Darker blue for links */
-  --accent-color: #c41e3a; /* Darker red */
+/* Fix contrast issues in footer */
+footer a {
+  color: #8cb3ff;
+  text-decoration: underline;
+  transition: color 0.2s ease;
 }
 
-/* Improve text contrast */
-.footer-address p {
-  color: rgba(255,255,255,0.9); /* Increased opacity for better contrast */
+footer a:hover {
+  color: white;
+  text-decoration: underline;
 }
 
-.footer-bottom {
-  color: rgba(255,255,255,0.9); /* Increased opacity for better contrast */
-}
-
-/* Improve button contrast */
-.info-btn {
-  background-color: #0e1923; /* Darker background */
-}
-
-/* Improve membership level indicators */
-.spotlight-level.silver {
-  background-color: #2e3438; /* Darker silver */
+.footer-address h3 {
   color: white;
 }
 
-/* Ensure active navigation is visible */
-#primary-nav a.active {
-  background-color: rgba(255, 255, 255, 0.2); /* More visible active state */
-  font-weight: bold;
+.footer-address p {
+  color: rgba(255,255,255,0.95);
+}
+
+.footer-bottom {
+  color: rgba(255,255,255,0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }

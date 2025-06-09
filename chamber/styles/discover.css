@@ -1,0 +1,325 @@
+/* Discover Page Styles */
+
+/* Main container styling */
+.discover-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Visit message styling */
+.visit-message {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+}
+
+/* Grid Layouts */
+.attractions-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Mobile first - single column */
+.attractions-grid {
+  grid-template-columns: 1fr;
+}
+
+/* Medium view - two columns */
+@media (min-width: 32.5em) {
+  .attractions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large view - three columns */
+@media (min-width: 64em) {
+  .attractions-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card Styles */
+.attraction-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.attraction-card:hover {
+  transform: translateY(-5px);
+}
+
+.attraction-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Image hover effect for larger views only */
+@media (min-width: 32.5em) {
+  .attraction-card:hover .attraction-img {
+    transform: scale(1.05);
+  }
+}
+
+.attraction-content {
+  padding: 1.5rem;
+}
+
+.attraction-content h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--primary-color);
+}
+
+.attraction-address {
+  font-style: normal;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.attraction-description {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.learn-more-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Stats Container */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+@media (min-width: 32.5em) {
+  .stats-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.stat-item {
+  background: white;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.stat-label {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Upcoming Events */
+.upcoming-events {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-top: 2rem;
+}
+
+.event-item {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.event-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.event-date {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+}
+
+/* Info Container Layout */
+.info-container {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 64em) {
+  .info-container {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* Content section styling */
+.discover-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.discover-content h2 {
+  margin-bottom: 0.75rem;
+  position: relative;
+  display: inline-block;
+  color: var(--primary-color);
+}
+
+.discover-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.discover-content > p {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+/* Companies Grid Layout */
+.companies-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Mobile first - single column */
+.companies-grid {
+  grid-template-columns: 1fr;
+}
+
+/* Medium view - two columns */
+@media (min-width: 32.5em) {
+  .companies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large view - three columns */
+@media (min-width: 64em) {
+  .companies-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Company Card Styles */
+.company-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.company-card:hover {
+  transform: translateY(-5px);
+}
+
+.company-card figure {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 16/9;
+}
+
+.company-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Image hover effect for larger views only */
+@media (min-width: 32.5em) {
+  .company-card:hover .company-img {
+    transform: scale(1.05);
+  }
+}
+
+.company-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.company-content h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--primary-color);
+}
+
+.company-address {
+  font-style: normal;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.company-description {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.learn-more-btn-company {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  align-self: flex-start;
+}
+
+.learn-more-btn-company:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Join Hero styling for discover page */
+.join-hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.join-hero-content p {
+  font-size: 1.2rem;
+}

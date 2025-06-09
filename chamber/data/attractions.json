@@ -1,0 +1,52 @@
+{
+  "attractions": [
+    {
+      "name": "Downtown Shopping District",
+      "address": "123 Main Street, Dash City",
+      "description": "Explore our vibrant downtown area with unique boutiques, restaurants, and entertainment venues.",
+      "image": "shopping-district.webp"
+    },
+    {
+      "name": "Weekly Farmers Market",
+      "address": "456 Market Square, Dash City",
+      "description": "Fresh local produce, artisan foods, and handcrafted goods from regional vendors. Open Saturdays, 8am-1pm.",
+      "image": "farmers-market.webp"
+    },
+    {
+      "name": "Technology Innovation Center",
+      "address": "789 Tech Blvd, Dash City",
+      "description": "Our state-of-the-art facility supporting local tech startups and entrepreneurs.",
+      "image": "tech-innovation.webp"
+    },
+    {
+      "name": "Dash City Museum",
+      "address": "101 History Lane, Dash City",
+      "description": "Discover the rich heritage and cultural history of our region through interactive exhibits.",
+      "image": "city-museum.webp"
+    },
+    {
+      "name": "Riverside Park",
+      "address": "202 River Road, Dash City",
+      "description": "Beautiful outdoor space with walking trails, picnic areas, and seasonal events along the riverfront.",
+      "image": "riverside-park.webp"
+    },
+    {
+      "name": "Dash Performing Arts Center",
+      "address": "303 Broadway Ave, Dash City",
+      "description": "Home to our local theater company, symphony orchestra, and various cultural performances.",
+      "image": "art-center.webp"
+    },
+    {
+      "name": "Sunset Winery",
+      "address": "404 Vineyard Way, Dash County",
+      "description": "Award-winning local winery offering tours, tastings, and special events with stunning valley views.",
+      "image": "sunset-winery.webp"
+    },
+    {
+      "name": "Mountain View Golf Club",
+      "address": "505 Fairway Drive, Dash City",
+      "description": "18-hole championship golf course with panoramic mountain views and full-service clubhouse.",
+      "image": "golf-club.webp"
+    }
+  ]
+}

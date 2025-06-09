@@ -7,15 +7,35 @@
   <meta name="description" content="Discover businesses and attractions in the Dash area.">
   <meta name="author" content="Enoh Uwem Akpan">
   <title>Discover | Dash-Dash Chamber of Commerce</title>
+  
+  <!-- Security headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; frame-src https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+  <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+  <meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
+
+  <!-- Preload critical assets -->
+  <link rel="preload" href="images/logo.png" as="image">
+  <link rel="preload" href="styles/chamber.css" as="style">
+  <link rel="preload" href="styles/discover.css" as="style">
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/chamber.css">
   <link rel="stylesheet" href="styles/medium.css" media="(min-width: 32.5em)">
   <link rel="stylesheet" href="styles/large-chamber.css" media="(min-width: 64em)">
+  <link rel="stylesheet" href="styles/discover.css">
+  <link rel="stylesheet" href="styles/fix-contrast.css">
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;700&display=swap"
+    rel="stylesheet" media="print" onload="this.media='all'" crossorigin="anonymous">
+  
+  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <!-- Open Graph Meta Tags -->
@@ -39,50 +59,48 @@
     </div>
     <nav aria-label="Main navigation">
       <ul id="primary-nav">
-        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-        <li><a href="discover.html">Discover</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html" class="active" aria-current="page">Discover</a></li>
         <li><a href="directory.html">Directory</a></li>
         <li><a href="join.html">Join</a></li>
       </ul>
     </nav>
   </header>
 
+  <div class="join-hero">
+    <div class="join-hero-content">
+      <h2>Discover Dash</h2>
+      <p>Explore local attractions, businesses, and community highlights.</p>
+    </div>
+  </div>
+
   <main role="main">
-    <section class="page-banner">
-      <div class="container">
-        <h1>Discover Dash</h1>
-        <p>Explore local attractions, businesses, and community highlights.</p>
+    <div class="discover-container">
+      <div id="visit-message" class="visit-message">
+        <!-- Visit message will be inserted here by JavaScript -->
       </div>
-    </section>
-
-    <div class="container">
-      <section class="page-content-section">
-        <h2>Local Attractions</h2>
+      
+      <section class="discover-content">
+        <h2 id="attractions">Local Attractions</h2>
+        <p>Discover the best places to visit in our vibrant community.</p>
+        
         <div class="attractions-grid">
-          <div class="attraction-card">
-            <img src="images/mannequin-with-tape-measure.jpg" alt="Downtown Shopping District" class="attraction-img">
-            <h3>Downtown Shopping District</h3>
-            <p>Explore our vibrant downtown area with unique boutiques, restaurants, and entertainment venues.</p>
-          </div>
-
-          <div class="attraction-card">
-            <img src="images/greenharvest.jpg" alt="Farmers Market" class="attraction-img">
-            <p class="attraction-date">Open Saturdays, 8am-1pm</p>
-            <h3>Weekly Farmers Market</h3>
-            <p>Fresh local produce, artisan foods, and handcrafted goods from regional vendors.</p>
-          </div>
-
-          <div class="attraction-card">
-            <img src="images/technova.jpg" alt="Innovation Center" class="attraction-img">
-            <h3>Technology Innovation Center</h3>
-            <p>Our state-of-the-art facility supporting local tech startups and entrepreneurs.</p>
-          </div>
+          <!-- Attraction cards will be inserted here by JavaScript -->
         </div>
       </section>
-
-      <section class="page-content-section">
-        <h2>Community Statistics</h2>
-        <div class="stats-container">
+      
+      <section class="discover-content">
+        <h2 id="companies">Chamber Member Businesses</h2>
+        <p>Explore our member businesses that make our community thrive.</p>
+        
+        <div class="companies-grid">
+          <!-- Company cards will be inserted here by JavaScript -->
+        </div>
+      </section>
+      
+      <div class="info-container">
+        <section class="stats-container">
+          <h2>Community Statistics</h2>
           <div class="stat-item">
             <div class="stat-number">25,000+</div>
             <div class="stat-label">Residents</div>
@@ -99,8 +117,22 @@
             <div class="stat-number">98%</div>
             <div class="stat-label">Business Retention</div>
           </div>
-        </div>
-      </section>
+        </section>
+        
+        <section class="upcoming-events">
+          <h2>Upcoming Events</h2>
+          <div class="event-item">
+            <h3>Business Networking Breakfast</h3>
+            <p class="event-date">June 15, 2023 | 8:00 AM</p>
+            <p>Connect with local business owners over breakfast at the Dash Hotel.</p>
+          </div>
+          <div class="event-item">
+            <h3>Summer Street Festival</h3>
+            <p class="event-date">July 8-10, 2023</p>
+            <p>Annual celebration with food, music, and local vendors in downtown Dash.</p>
+          </div>
+        </section>
+      </div>
     </div>
   </main>
 
@@ -130,6 +162,7 @@
     </div>
   </footer>
   <script src="scripts/script.js"></script>
+  <script src="scripts/discover.js"></script>
 </body>
 
 </html>

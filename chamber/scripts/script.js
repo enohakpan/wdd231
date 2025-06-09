@@ -1,57 +1,42 @@
-// Main JavaScript for Chamber of Commerce site
+// Common JavaScript for all pages
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Mobile menu toggle - FIXED VERSION
-    const hamburgerBtn = document.getElementById('hamburger-btn');
-    const primaryNav = document.getElementById('primary-nav');
-    
-    if (hamburgerBtn && primaryNav) {
-        // Direct onclick handler instead of addEventListener
-        hamburgerBtn.onclick = function() {
-            primaryNav.classList.toggle('open');
-            const isExpanded = primaryNav.classList.contains('open');
-            hamburgerBtn.setAttribute('aria-expanded', isExpanded);
-            console.log('Hamburger clicked, menu toggled');
-            return false; // Prevent default behavior
-        };
-    }
-    
-    // Update copyright year
-    const currentYearElement = document.getElementById('current-year');
-    if (currentYearElement) {
-        currentYearElement.textContent = new Date().getFullYear();
-    }
-    
-    // Update last modified date
-    const lastUpdatedElement = document.getElementById('last-updated');
-    if (lastUpdatedElement) {
-        lastUpdatedElement.textContent = document.lastModified;
-    }
-    
-    // Add active class to current page in navigation
-    const currentPage = window.location.pathname.split('/').pop();
-    const navLinks = document.querySelectorAll('#primary-nav a');
-    
-    navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
-            link.classList.add('active');
-            link.setAttribute('aria-current', 'page');
-        } else {
-            link.classList.remove('active');
-            link.removeAttribute('aria-current');
-        }
+// Set current year in footer
+document.getElementById('current-year').textContent = new Date().getFullYear();
+
+// Set last updated date in footer
+document.getElementById('last-updated').textContent = document.lastModified;
+
+// Add hamburger menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const primaryNav = document.getElementById('primary-nav');
+  
+  if (hamburgerBtn && primaryNav) {
+    hamburgerBtn.addEventListener('click', function() {
+      primaryNav.classList.toggle('open');
+      const expanded = primaryNav.classList.contains('open');
+      hamburgerBtn.setAttribute('aria-expanded', expanded);
     });
-    
-    // Lazy load images for better performance
-    if ('loading' in HTMLImageElement.prototype) {
-        const images = document.querySelectorAll('img[loading="lazy"]');
-        images.forEach(img => {
-            img.src = img.dataset.src;
-        });
-    } else {
-        // Fallback for browsers that don't support lazy loading
-        const script = document.createElement('script');
-        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
-        document.body.appendChild(script);
-    }
+  }
+  
+  // Set secure cookie attributes
+  document.cookie = "SameSite=Strict; Secure";
 });
+
+// Add security headers via JavaScript as a fallback
+function addSecurityHeaders() {
+  try {
+    // Check if headers are already set via meta tags
+    if (!document.querySelector('meta[http-equiv="Content-Security-Policy"]')) {
+      const cspMeta = document.createElement('meta');
+      cspMeta.setAttribute('http-equiv', 'Content-Security-Policy');
+      cspMeta.setAttribute('content', "default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; frame-src https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;");
+      document.head.appendChild(cspMeta);
+    }
+  } catch (e) {
+    // Silent fail
+  }
+}
+
+// Call the function to ensure headers are set
+addSecurityHeaders();
