@@ -182,10 +182,14 @@ function displayCompanies(companies) {
     // Create description
     const description = createSafeElement('p', { className: 'company-description' }, company.description);
     
+    // Create button
+    const button = createSafeElement('button', { className: 'learn-more-btn-company' }, 'Learn More');
+    
     // Append all elements
     content.appendChild(title);
     content.appendChild(address);
     content.appendChild(description);
+    content.appendChild(button);
     
     card.appendChild(figure);
     card.appendChild(content);
