@@ -1,0 +1,37 @@
+/* Toast Notification Styles */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast i {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 480px) {
+  .toast {
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}

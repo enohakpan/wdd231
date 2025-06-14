@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Favorites - DishDash</title>
+  <title>Form Submission - DishDash</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="styles/styles.css" />
   <link rel="stylesheet" href="styles/medium.css" />
@@ -11,30 +11,38 @@
 </head>
 <body>
   <header class="site-header">
-    <h1><img src="images/logo.svg" alt="DishDash Logo" width="40" height="40"> DishDash</h1>
-    <nav>
+    <h1>🍽️ DishDash</h1>
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="main-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="recipes.html">Recipes</a></li>
         <li><a href="planner.html">Meal Planner</a></li>
         <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="favorites-section">
-      <h2>Your Favorite Recipes</h2>
-      <div id="favoritesGrid" class="recipe-grid">
-        <!-- Favorite recipes will be dynamically displayed here -->
+    <section class="form-response">
+      <h2>Thank You for Your Message!</h2>
+      <div class="response-details">
+        <h3>Your submission details:</h3>
+        <div id="submissionDetails"></div>
       </div>
+      <a href="contact.html" class="back-btn">Back to Contact Form</a>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-content">
       <div class="footer-logo">
-        <img src="images/logo.svg" alt="DishDash Logo">
+        <h3>🍽️ DishDash</h3>
         <p>Discover the joy of cooking</p>
       </div>
       
@@ -70,7 +78,32 @@
     
     // Update last modified date
     document.getElementById('lastModified').textContent = document.lastModified;
+
+    // Display form submission details
+    const detailsContainer = document.getElementById('submissionDetails');
+    const params = new URLSearchParams(window.location.search);
+    
+    if (params.toString()) {
+      const details = {
+        'Name': params.get('name'),
+        'Email': params.get('email'),
+        'Subject': params.get('subject'),
+        'Message': params.get('message')
+      };
+
+      const detailsHTML = Object.entries(details)
+        .map(([key, value]) => `
+          <div class="detail-item">
+            <strong>${key}:</strong>
+            <span>${value}</span>
+          </div>
+        `)
+        .join('');
+
+      detailsContainer.innerHTML = detailsHTML;
+    } else {
+      detailsContainer.innerHTML = '<p>No submission details found.</p>';
+    }
   </script>
-  <script src="scripts/favorites.js"></script>
 </body>
-</html>
+</html> 

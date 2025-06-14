@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Planner - Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/meal-planner.css">
+    <link rel="icon" href="favicon.ico">
+    <meta name="description" content="Plan your meals for the week with our easy-to-use meal planner">
+    <meta name="author" content="Your Name">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="images/logo.webp" alt="Chamber Logo" width="100" height="100">
+                <div class="header-text">
+                    <h1>Chamber of Commerce</h1>
+                    <p class="subtitle">Lagos, Nigeria</p>
+                </div>
+            </div>
+            <nav>
+                <button id="menu-button" aria-label="Menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="meal-planner.html" class="active">Meal Planner</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="banner" class="hidden">
+            <p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p>
+            <button id="close-banner">❌</button>
+        </div>
+    </header>
+
+    <main class="meal-planner">
+        <h2>Weekly Meal Planner</h2>
+        
+        <div class="planner-controls">
+            <button id="add-meal" class="btn">Add Meal</button>
+            <button id="generate-shopping-list" class="btn">Generate Shopping List</button>
+            <button id="save-plan" class="btn">Save Plan</button>
+        </div>
+
+        <div class="meal-planner-grid">
+            <div class="time-slots">
+                <div class="time-slot">Breakfast</div>
+                <div class="time-slot">Lunch</div>
+                <div class="time-slot">Dinner</div>
+            </div>
+            <div class="week-grid">
+                <!-- Days will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Add Meal Modal -->
+        <div id="meal-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Add Meal</h3>
+                <form id="meal-form">
+                    <div class="form-group">
+                        <label for="meal-name">Meal Name:</label>
+                        <input type="text" id="meal-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="meal-type">Meal Type:</label>
+                        <select id="meal-type" required>
+                            <option value="breakfast">Breakfast</option>
+                            <option value="lunch">Lunch</option>
+                            <option value="dinner">Dinner</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="meal-day">Day:</label>
+                        <select id="meal-day" required>
+                            <option value="monday">Monday</option>
+                            <option value="tuesday">Tuesday</option>
+                            <option value="wednesday">Wednesday</option>
+                            <option value="thursday">Thursday</option>
+                            <option value="friday">Friday</option>
+                            <option value="saturday">Saturday</option>
+                            <option value="sunday">Sunday</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ingredients">Ingredients:</label>
+                        <textarea id="ingredients" rows="4" placeholder="Enter ingredients, one per line"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="instructions">Instructions:</label>
+                        <textarea id="instructions" rows="4" placeholder="Enter cooking instructions"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Save Meal</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Shopping List Modal -->
+        <div id="shopping-list-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Shopping List</h3>
+                <div id="shopping-list-content"></div>
+                <button id="print-list" class="btn">Print List</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="images/logo.webp" alt="Chamber Logo" width="100" height="100">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>📍 123 Business Street, Lagos, Nigeria</p>
+                    <p>📞 +234 123 456 7890</p>
+                    <p>✉️ info@lagoschamber.com</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook" width="32" height="32"></a>
+                    <a href="#" aria-label="Twitter"><img src="images/twitter.png" alt="Twitter" width="32" height="32"></a>
+                    <a href="#" aria-label="Instagram"><img src="images/instagram.png" alt="Instagram" width="32" height="32"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Lagos Chamber of Commerce</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/meal-planner.js"></script>
+</body>
+</html> 

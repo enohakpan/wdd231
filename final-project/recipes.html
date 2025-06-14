@@ -6,18 +6,20 @@
   <title>Recipes - DishDash</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/modal-fix.css" />
+  <link rel="stylesheet" href="styles/improved-favorites-modal.css" />
+  <link rel="stylesheet" href="styles/contact-form.css" />
   <link rel="stylesheet" href="styles/medium.css" />
   <link rel="stylesheet" href="styles/large.css" />
 </head>
 <body>
   <header class="site-header">
     <h1>🍽️ DishDash</h1>
-    <nav>
+    <nav class="main-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="recipes.html" class="active">Recipes</a></li>
         <li><a href="planner.html">Meal Planner</a></li>
-        <li><a href="favorites.html">Favorites</a></li>
       </ul>
     </nav>
   </header>
@@ -25,6 +27,9 @@
   <main>
     <section class="search-section">
       <input type="text" id="searchInput" placeholder="Search for recipes..." />
+      <button class="btn btn-favorites" onclick="showFavoritesModal()">
+        <i class="fas fa-heart"></i> View Favorites
+      </button>
     </section>
 
     <section class="recipe-results" id="recipeResults">
@@ -34,22 +39,10 @@
 
   <footer class="site-footer">
     <div class="footer-content">
-      <div class="footer-logo">
+      <!-- Column 1: Brand and Social -->
+      <div class="footer-brand">
         <h3>🍽️ DishDash</h3>
         <p>Discover the joy of cooking</p>
-      </div>
-      
-      <div class="footer-contact">
-        <h3>Contact Us</h3>
-        <ul class="contact-info">
-          <li><i class="fas fa-envelope"></i> dashdash59600@gmail.com</li>
-          <li><i class="fas fa-phone"></i> +2349027554682</li>
-          <li><i class="fas fa-map-marker-alt"></i> No.15 Sunrise Estate, Emene Enugu State, Nigeria</li>
-        </ul>
-      </div>
-      
-      <div class="footer-social">
-        <h3>Follow Us</h3>
         <div class="social-links">
           <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -57,21 +50,188 @@
           <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
         </div>
       </div>
+
+      <!-- Column 2: Contact Info -->
+      <div class="footer-contact-info">
+        <h3>Contact Us</h3>
+        <ul class="contact-info">
+          <li><i class="fas fa-envelope"></i> dashdash59600@gmail.com</li>
+          <li><i class="fas fa-phone"></i> +2349027554682</li>
+          <li><i class="fas fa-map-marker-alt"></i> No.15 Sunrise Estate, Emene Enugu State, Nigeria</li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Contact Form -->
+      <div class="footer-contact-form">
+        <h3>Get In Touch</h3>
+
+        <!-- Progress Indicator -->
+        <div class="form-progress">
+          <div class="progress-dot active"></div>
+          <div class="progress-dot"></div>
+          <div class="progress-dot"></div>
+        </div>
+
+        <!-- Step 1: Personal Info -->
+        <div id="step-1" class="contact-form-step active">
+          <div class="form-group">
+            <label for="contact-name">Full Name *</label>
+            <input type="text" id="contact-name" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email Address *</label>
+            <input type="email" id="contact-email" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-phone">Phone Number</label>
+            <input type="tel" id="contact-phone">
+          </div>
+          <div class="form-navigation">
+            <button type="button" class="form-btn btn-next">Next</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Message Details -->
+        <div id="step-2" class="contact-form-step">
+          <div class="form-group">
+            <label for="contact-subject">Subject *</label>
+            <input type="text" id="contact-subject" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-category">Category</label>
+            <select id="contact-category">
+              <option value="">Select a category</option>
+              <option value="general">General Inquiry</option>
+              <option value="recipe">Recipe Question</option>
+              <option value="technical">Technical Support</option>
+              <option value="partnership">Partnership</option>
+              <option value="feedback">Feedback</option>
+            </select>
+          </div>
+          <div class="form-navigation">
+            <button type="button" class="form-btn btn-back">Back</button>
+            <button type="button" class="form-btn btn-next">Next</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Message and Preferences -->
+        <div id="step-3" class="contact-form-step">
+          <div class="form-group">
+            <label for="contact-message">Your Message *</label>
+            <textarea id="contact-message" required maxlength="500"
+              placeholder="Tell us how we can help you..."></textarea>
+            <span class="char-count">0/500</span>
+          </div>
+          <div class="form-group">
+            <label>
+              <input type="checkbox" id="newsletter-signup" style="margin-right: 0.5rem;">
+              Subscribe to our newsletter for recipe updates
+            </label>
+          </div>
+          <div class="form-navigation">
+            <button type="button" class="form-btn btn-back">Back</button>
+            <button type="button" class="form-btn btn-submit">Send Message</button>
+          </div>
+        </div>
+      </div>
     </div>
-    
+
     <div class="footer-bottom">
-      <p>&copy; <span id="currentYear">2023</span> DishDash. All Rights Reserved.</p>
+      <p>&copy; <span id="currentYear">2023</span> DishDash. All Rights Reserved. <a href="https://app.screencastify.com/watch/AViUsmSXluLZtyR2Wxd1" class="video-link">Click to view video</a></p>
       <p>Last Modified: <span id="lastModified"></span></p>
     </div>
   </footer>
 
-  <script>
-    // Update copyright year
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-    
-    // Update last modified date
-    document.getElementById('lastModified').textContent = document.lastModified;
-  </script>
+  <!-- Mobile Contact Button -->
+  <button class="mobile-contact-btn" aria-label="Contact Us">
+    <i class="fas fa-envelope"></i>
+  </button>
+
+  <!-- Mobile Contact Modal -->
+  <div class="contact-form-modal">
+    <div class="contact-form-modal-content">
+      <button class="modal-close-btn" aria-label="Close">&times;</button>
+      <h3 style="color: var(--footer-text); text-align: center; margin-bottom: 1rem;">Get In Touch</h3>
+
+      <!-- Progress Indicator -->
+      <div class="form-progress">
+        <div class="progress-dot active"></div>
+        <div class="progress-dot"></div>
+        <div class="progress-dot"></div>
+      </div>
+
+      <!-- Same form steps as desktop version -->
+      <div id="step-1" class="contact-form-step active">
+        <div class="form-group">
+          <label for="mobile-contact-name">Full Name *</label>
+          <input type="text" id="mobile-contact-name" required>
+        </div>
+        <div class="form-group">
+          <label for="mobile-contact-email">Email Address *</label>
+          <input type="email" id="mobile-contact-email" required>
+        </div>
+        <div class="form-group">
+          <label for="mobile-contact-phone">Phone Number</label>
+          <input type="tel" id="mobile-contact-phone">
+        </div>
+        <div class="form-navigation">
+          <button type="button" class="form-btn btn-next">Next</button>
+        </div>
+      </div>
+
+      <div id="step-2" class="contact-form-step">
+        <div class="form-group">
+          <label for="mobile-contact-subject">Subject *</label>
+          <input type="text" id="mobile-contact-subject" required>
+        </div>
+        <div class="form-group">
+          <label for="mobile-contact-category">Category</label>
+          <select id="mobile-contact-category">
+            <option value="">Select a category</option>
+            <option value="general">General Inquiry</option>
+            <option value="recipe">Recipe Question</option>
+            <option value="technical">Technical Support</option>
+            <option value="partnership">Partnership</option>
+            <option value="feedback">Feedback</option>
+          </select>
+        </div>
+        <div class="form-navigation">
+          <button type="button" class="form-btn btn-back">Back</button>
+          <button type="button" class="form-btn btn-next">Next</button>
+        </div>
+      </div>
+
+      <div id="step-3" class="contact-form-step">
+        <div class="form-group">
+          <label for="mobile-contact-message">Your Message *</label>
+          <textarea id="mobile-contact-message" required maxlength="500"
+            placeholder="Tell us how we can help you..."></textarea>
+          <span class="char-count">0/500</span>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="mobile-newsletter-signup" style="margin-right: 0.5rem;">
+            Subscribe to our newsletter
+          </label>
+        </div>
+        <div class="form-navigation">
+          <button type="button" class="form-btn btn-back">Back</button>
+          <button type="button" class="form-btn btn-submit">Send Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="favoritesModal" class="favorites-modal hidden">
+    <div class="favorites-modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Your Favorite Recipes</h2>
+      <div id="favoritesGrid" class="favorites-grid">
+        <!-- Favorites will be dynamically added here -->
+      </div>
+    </div>
+  </div>
   <script src="scripts/recipes.js"></script>
+  <script src="scripts/contact-form.js"></script>
 </body>
 </html>

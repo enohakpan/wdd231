@@ -1,0 +1,167 @@
+/* Favorites Modal Styling */
+.favorites-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.favorites-modal.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.favorites-modal:not(.hidden) {
+  opacity: 1;
+  visibility: visible;
+}
+
+.favorites-modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.favorites-modal .close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.3s;
+}
+
+.favorites-modal .close-button:hover {
+  color: #000;
+  transform: rotate(90deg);
+}
+
+.favorites-modal h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Favorite Card Styling */
+.favorite-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+.favorite-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Set image width to exactly 80px as requested */
+.favorite-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.8rem;
+  border: 3px solid var(--secondary-color);
+}
+
+.favorite-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+/* Button Styling */
+.favorite-card button {
+  margin-top: 0.8rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+  width: 100%;
+  max-width: 150px;
+}
+
+.remove-favorite-btn {
+  background-color: #ff6b6b;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.remove-favorite-btn:hover {
+  background-color: #ff5252;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3);
+}
+
+.view-recipe-btn {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.view-recipe-btn:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(74, 37, 17, 0.3);
+}
+
+/* Animation for removing favorites */
+.favorite-card.removing {
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Message for no favorites */
+.no-favorites {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-color);
+  font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .favorites-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .favorites-grid {
+    grid-template-columns: 1fr;
+  }
+}

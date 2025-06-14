@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - DishDash</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/medium.css" />
+  <link rel="stylesheet" href="styles/large.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>🍽️ DishDash</h1>
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="planner.html">Meal Planner</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <h2>Contact Us</h2>
+      <p>Have questions or feedback? We'd love to hear from you!</p>
+      
+      <form id="contactForm" action="form-action.html" method="GET">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required 
+                 pattern="[A-Za-z\s]{2,}" 
+                 title="Please enter a valid name (letters and spaces only)">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject:</label>
+          <select id="subject" name="subject" required>
+            <option value="">Select a subject</option>
+            <option value="feedback">Feedback</option>
+            <option value="question">Question</option>
+            <option value="suggestion">Suggestion</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required 
+                    minlength="10" 
+                    maxlength="500"></textarea>
+          <span class="char-count">0/500</span>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h3>🍽️ DishDash</h3>
+        <p>Discover the joy of cooking</p>
+      </div>
+      
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <ul class="contact-info">
+          <li><i class="fas fa-envelope"></i> dashdash59600@gmail.com</li>
+          <li><i class="fas fa-phone"></i> +2349027554682</li>
+          <li><i class="fas fa-map-marker-alt"></i> No.15 Sunrise Estate, Emene Enugu State, Nigeria</li>
+        </ul>
+      </div>
+      
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear">2023</span> DishDash. All Rights Reserved.</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+  <script>
+    // Update copyright year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    
+    // Update last modified date
+    document.getElementById('lastModified').textContent = document.lastModified;
+
+    // Character count for message
+    const messageInput = document.getElementById('message');
+    const charCount = document.querySelector('.char-count');
+    
+    messageInput.addEventListener('input', () => {
+      const count = messageInput.value.length;
+      charCount.textContent = `${count}/500`;
+    });
+
+    // Form validation
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+      
+      // Validate data
+      if (validateForm(data)) {
+        // Redirect to form action page with data
+        const params = new URLSearchParams(data);
+        window.location.href = `form-action.html?${params.toString()}`;
+      }
+    });
+
+    function validateForm(data) {
+      // Name validation
+      if (!/^[A-Za-z\s]{2,}$/.test(data.name)) {
+        alert('Please enter a valid name (letters and spaces only)');
+        return false;
+      }
+
+      // Email validation
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+        alert('Please enter a valid email address');
+        return false;
+      }
+
+      // Subject validation
+      if (!data.subject) {
+        alert('Please select a subject');
+        return false;
+      }
+
+      // Message validation
+      if (data.message.length < 10) {
+        alert('Message must be at least 10 characters long');
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</body>
+</html> 
