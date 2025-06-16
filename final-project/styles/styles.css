@@ -99,6 +99,11 @@ h1, h2, h3, h4 {
   width: 100%;
 }
 
+.logo {
+  width: 60px;
+  border-radius: 30%;
+}
+
 /* Mobile Navigation */
 @media (max-width: 767px) {
   .site-header {
