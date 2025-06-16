@@ -296,7 +296,7 @@ h1, h2, h3, h4 {
   z-index: 2;
 }
 
-.hero h2 {
+.hero h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
   animation: fadeInUp 1s ease-out;
@@ -391,9 +391,13 @@ h1, h2, h3, h4 {
   padding: 2rem 1rem;
 }
 
+.search-section h1 {
+  color: #ffffff;
+}
+
 .featured-recipes h3,
 .favorites-section h2,
-.meal-planner h2 {
+.meal-planner h1 {
   text-align: center;
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
@@ -489,6 +493,48 @@ h1, h2, h3, h4 {
 }
 
 .btn-favorites {
+  background-color: var(--accent-color);
+  color: var(--button-text);
+  border: none;
+  margin-top: 20px;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all var(--transition-speed);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-save {
+  background-color: var(--accent-color);
+  color: var(--button-text);
+  border: none;
+  margin-top: 20px;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all var(--transition-speed);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-clear {
+  background-color: var(--accent-color);
+  color: var(--button-text);
+  border: none;
+  margin-top: 20px;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all var(--transition-speed);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-print {
   background-color: var(--accent-color);
   color: var(--button-text);
   border: none;
@@ -2050,4 +2096,22 @@ h1, h2, h3, h4 {
   .favorites-modal-content {
     padding: 3rem;
   }
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-logo .logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.header-logo .site-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
 }

@@ -539,3 +539,19 @@
     transform: translateY(0);
   }
 }
+
+.modal-title {
+  color: var(--footer-text);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin: 0;
+}

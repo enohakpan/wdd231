@@ -517,7 +517,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Create planner header with action buttons
   function createPlannerHeader() {
     const plannerSection = document.querySelector(".meal-planner")
-    const plannerTitle = plannerSection.querySelector("h2")
+    const plannerTitle = plannerSection.querySelector("h1")
 
     // Create header container
     const headerContainer = document.createElement("div")
