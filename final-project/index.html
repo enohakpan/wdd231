@@ -7,28 +7,28 @@
   <meta name="description"
     content="DishDash - Your ultimate destination for authentic Nigerian cuisine and recipes. Discover traditional dishes, plan your meals, and explore the rich culinary heritage of Nigeria." />
   <meta name="keywords" content="Nigerian recipes, meal planner, authentic cuisine, food discovery, cooking, traditional dishes" />
-  <meta name="author" content="Enoh Uwem Akpan" />
+  <meta name="author" content="Enoh Uwem Akpan" >
   <title>DishDash - Recipe Discovery</title>
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="styles/styles.css" />
-  <link rel="stylesheet" href="styles/modal-fix.css" />
-  <link rel="stylesheet" href="styles/favorites-modal.css" />
-  <link rel="stylesheet" href="styles/contact-form.css" />
-  <link rel="stylesheet" href="styles/medium.css" media="(min-width: 768px)" />
-  <link rel="stylesheet" href="styles/large.css" media="(min-width: 1024px)" />
-  <link rel="stylesheet" href="styles/hamburger-menu.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" >
+  <link rel="preconnect" href="https://fonts.googleapis.com" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles/styles.css" >
+  <link rel="stylesheet" href="styles/modal-fix.css" >
+  <link rel="stylesheet" href="styles/favorites-modal.css" >
+  <link rel="stylesheet" href="styles/contact-form.css" >
+  <link rel="stylesheet" href="styles/medium.css" media="(min-width: 768px)" >
+  <link rel="stylesheet" href="styles/large.css" media="(min-width: 1024px)" >
+  <link rel="stylesheet" href="styles/hamburger-menu.css" >
 
   <!-- Favicon -->
-  <link rel="icon" href="images/logo.jpeg" type="image/png" />
+  <link rel="icon" href="images/logo.jpeg" type="image/png" >
 
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="DishDash - Discover Authentic Nigerian Recipes" />
-  <meta property="og:description" content="Explore a wide range of traditional Nigerian dishes, plan your meals, and connect with the rich culinary heritage of Nigeria. Join our community of food lovers!" />
-  <meta property="og:image" content="images/og-image.jpg" />
-  <meta property="og:url" content="https://enohakpan.github.io/wdd231/final-project/" />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DishDash - Discover Authentic Nigerian Recipes" >
+  <meta property="og:description" content="Explore a wide range of traditional Nigerian dishes, plan your meals, and connect with the rich culinary heritage of Nigeria. Join our community of food lovers!" >
+  <meta property="og:image" content="images/og-image.jpg" >
+  <meta property="og:url" content="https://enohakpan.github.io/wdd231/final-project/" >
+  <meta property="og:type" content="website" >
 </head>
 
 <body>
@@ -150,7 +150,7 @@
     <div class="modal-content">
       <span class="close-button">&times;</span>
       <h2 id="modalTitle"></h2>
-      <img id="modalImage" src="" alt="Recipe image">
+      <img id="modalImage" src="images/placeholder.jpg" alt="Recipe image">
       <h3>Ingredients</h3>
       <ul id="modalIngredients"></ul>
       <h3>Instructions</h3>
@@ -281,8 +281,8 @@
         <div class="progress-dot"></div>
       </div>
 
-      <!-- Same form steps as desktop version -->
-      <div id="step-1" class="contact-form-step active">
+      <!-- Step 1: Personal Info -->
+      <div id="mobile-step-1" class="contact-form-step active">
         <div class="form-group">
           <label for="mobile-contact-name">Full Name *</label>
           <input type="text" id="mobile-contact-name" required>
@@ -300,7 +300,8 @@
         </div>
       </div>
 
-      <div id="step-2" class="contact-form-step">
+      <!-- Step 2: Message Details -->
+      <div id="mobile-step-2" class="contact-form-step">
         <div class="form-group">
           <label for="mobile-contact-subject">Subject *</label>
           <input type="text" id="mobile-contact-subject" required>
@@ -322,7 +323,8 @@
         </div>
       </div>
 
-      <div id="step-3" class="contact-form-step">
+      <!-- Step 3: Message and Preferences -->
+      <div id="mobile-step-3" class="contact-form-step">
         <div class="form-group">
           <label for="mobile-contact-message">Your Message *</label>
           <textarea id="mobile-contact-message" required maxlength="500"
