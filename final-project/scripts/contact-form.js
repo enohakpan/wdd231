@@ -24,6 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
       mobileBtn.addEventListener("click", () => {
         modal.classList.add("active")
         document.body.style.overflow = "hidden"
+        // Reset form to first step when opening modal
+        currentStep = 1
+        showStep(1)
+        updateProgress()
       })
     }
 
@@ -75,8 +79,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Show current step
     const currentStepEl = document.querySelector(`#step-${step}`)
-    if (currentStepEl) {
-      currentStepEl.classList.add("active")
+    const mobileStepEl = document.querySelector(`#mobile-step-${step}`)
+    
+    if (window.innerWidth <= 768) {
+      // Mobile view
+      if (mobileStepEl) {
+        mobileStepEl.classList.add("active")
+      }
+    } else {
+      // Desktop view
+      if (currentStepEl) {
+        currentStepEl.classList.add("active")
+      }
     }
 
     currentStep = step
@@ -106,7 +120,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function validateCurrentStep() {
-    const currentStepEl = document.querySelector(`#step-${currentStep}`)
+    const isMobile = window.innerWidth <= 768
+    const prefix = isMobile ? "mobile-" : ""
+    const currentStepEl = document.querySelector(`#${prefix}step-${currentStep}`)
     const requiredFields = currentStepEl.querySelectorAll("[required]")
     let isValid = true
 
@@ -133,21 +149,24 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function submitForm() {
+    const isMobile = window.innerWidth <= 768
+    const prefix = isMobile ? "mobile-" : ""
+
     // Collect form data
     const formData = new FormData()
 
     // Step 1 data
-    formData.append("name", document.getElementById("contact-name").value)
-    formData.append("email", document.getElementById("contact-email").value)
-    formData.append("phone", document.getElementById("contact-phone").value)
+    formData.append("name", document.getElementById(`${prefix}contact-name`).value)
+    formData.append("email", document.getElementById(`${prefix}contact-email`).value)
+    formData.append("phone", document.getElementById(`${prefix}contact-phone`).value)
 
     // Step 2 data
-    formData.append("subject", document.getElementById("contact-subject").value)
-    formData.append("category", document.getElementById("contact-category").value)
+    formData.append("subject", document.getElementById(`${prefix}contact-subject`).value)
+    formData.append("category", document.getElementById(`${prefix}contact-category`).value)
 
     // Step 3 data
-    formData.append("message", document.getElementById("contact-message").value)
-    formData.append("newsletter", document.getElementById("newsletter-signup").checked)
+    formData.append("message", document.getElementById(`${prefix}contact-message`).value)
+    formData.append("newsletter", document.getElementById(`${prefix}newsletter-signup`).checked)
 
     // Show loading state
     const submitBtn = document.querySelector(".btn-submit")
@@ -186,13 +205,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function resetForm() {
     currentStep = 1
+    const isMobile = window.innerWidth <= 768
+    const prefix = isMobile ? "mobile-" : ""
+    
     document
-      .querySelectorAll(".contact-form-step input, .contact-form-step textarea, .contact-form-step select")
+      .querySelectorAll(`#${prefix}step-${currentStep} input, #${prefix}step-${currentStep} textarea, #${prefix}step-${currentStep} select`)
       .forEach((field) => {
         field.value = ""
         field.style.borderColor = "rgba(255, 255, 255, 0.3)"
       })
-    document.getElementById("newsletter-signup").checked = false
+    
+    document.getElementById(`${prefix}newsletter-signup`).checked = false
     showStep(1)
   }
 })
