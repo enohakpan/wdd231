@@ -128,6 +128,42 @@
   transform: translateX(-50%);
 }
 
+/* Contact Form Modal */
+.contact-form-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.contact-form-modal.active {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.contact-form-modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: var(--footer-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
 /* Contact Form Steps */
 .contact-form-step {
   display: none;
@@ -267,61 +303,6 @@
 .mobile-contact-btn:hover {
   transform: scale(1.1);
   background-color: var(--secondary-color);
-}
-
-/* Contact Form Modal */
-.contact-form-modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1001;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
-
-.contact-form-modal.active {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-}
-
-.contact-form-modal-content {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  max-width: 500px;
-  max-height: 90vh;
-  overflow-y: auto;
-  background-color: var(--footer-bg);
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.modal-close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  color: var(--footer-text);
-  font-size: 1.5rem;
-  cursor: pointer;
-  padding: 5px;
-  line-height: 1;
-  transition: all var(--transition-speed);
-}
-
-.modal-close-btn:hover {
-  color: var(--secondary-color);
-  transform: scale(1.1);
 }
 
 /* Responsive Design */
