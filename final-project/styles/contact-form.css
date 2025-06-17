@@ -135,8 +135,9 @@
   width: 100%;
 }
 
-.form-group label {
-  color: white;
+.footer-contact-form .form-group label,
+.contact-form-modal .form-group label {
+  color: white !important;
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
