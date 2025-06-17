@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <img src="${recipe.image}" alt="${recipe.name}" onerror="this.src='images/recipes/jollof-rice.webp';">
             <h4>${recipe.name}</h4>
             <button class="remove-recipe-btn" title="Remove recipe">×</button>
-            <span class="recipe-id" style="display:none;">${recipe.id}</span>
+            <span class="recipe-id ${hiddenClass}">${recipe.id}</span>
           </div>
         `
 
@@ -481,7 +481,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <i class="fas fa-check-circle"></i>
           <h4>Message Sent Successfully!</h4>
           <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>
-          <button class="form-btn btn-next" onclick="location.reload()" style="margin-top: 1rem;">Send Another Message</button>
+          <button class="form-btn btn-next mt-2" onclick="location.reload()">Send Another Message</button>
         </div>
       `
 
@@ -718,7 +718,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <img src="${recipe.image}" alt="${recipe.name}" onerror="this.src='images/recipes/jollof-rice.webp';">
               <h4>${recipe.name}</h4>
               <button class="remove-recipe-btn">×</button>
-              <span class="recipe-id" style="display:none;">${recipe.id}</span>
+              <span class="recipe-id ${hiddenClass}">${recipe.id}</span>
             </div>
           `
 
@@ -839,7 +839,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   <img src="${recipe.image}" alt="${recipe.name}" onerror="this.src='images/recipes/jollof-rice.webp';">
                   <h4>${recipe.name}</h4>
                   <button class="remove-recipe-btn" title="Remove recipe">×</button>
-                  <span class="recipe-id" style="display:none;">${recipe.id || ""}</span>
+                  <span class="recipe-id ${hiddenClass}">${recipe.id || ""}</span>
                 </div>
               `
 

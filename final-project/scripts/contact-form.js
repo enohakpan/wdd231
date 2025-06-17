@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <i class="fas fa-check-circle"></i>
         <h4>Message Sent Successfully!</h4>
         <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>
-        <button class="form-btn btn-next" onclick="location.reload()" style="margin-top: 1rem;">Send Another Message</button>
+        <button class="form-btn btn-next mt-2" onclick="location.reload()">Send Another Message</button>
       </div>
     `
 

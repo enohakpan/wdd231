@@ -136,9 +136,9 @@
 }
 
 .form-group label {
+  color: white;
   display: block;
   margin-bottom: 0.5rem;
-  color: var(--footer-text);
   font-weight: 600;
   font-size: 0.9rem;
 }
@@ -488,8 +488,10 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
 }
 
 .checkbox-label input[type="checkbox"] {
+  width: auto;
   margin: 0;
 }
