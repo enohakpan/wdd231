@@ -317,4 +317,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
   }
+
+  // Add event listener for favorites button
+  document.getElementById('viewFavoritesBtn').addEventListener('click', showFavoritesModal);
 });

@@ -481,7 +481,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <i class="fas fa-check-circle"></i>
           <h4>Message Sent Successfully!</h4>
           <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>
-          <button class="form-btn btn-next mt-2" onclick="location.reload()">Send Another Message</button>
+          <button class="form-btn btn-next mt-2" id="sendAnotherBtn">Send Another Message</button>
         </div>
       `
 
@@ -512,6 +512,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initialize form
     showStep(1)
     updateProgress()
+
+    // Add event listener for send another button
+    document.addEventListener('click', (e) => {
+      if (e.target && e.target.id === 'sendAnotherBtn') {
+        location.reload();
+      }
+    });
   }
 
   // Create planner header with action buttons

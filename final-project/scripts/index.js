@@ -81,6 +81,15 @@ document.addEventListener("DOMContentLoaded", () => {
           document.body.style.overflow = '';
         }
       });
+
+      // Add event listeners for navigation buttons
+      document.getElementById('exploreRecipesBtn').addEventListener('click', () => {
+        window.location.href = 'recipes.html';
+      });
+
+      document.getElementById('planMealsBtn').addEventListener('click', () => {
+        window.location.href = 'planner.html';
+      });
     })
     .catch(error => {
       console.error('Error loading recipes:', error);

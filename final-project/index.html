@@ -74,10 +74,10 @@
         <h2>Welcome to DishDash!</h2>
         <p>Your ultimate destination for authentic Nigerian cuisine and recipes.</p>
         <div class="hero-buttons">
-          <button onclick="window.location.href='recipes.html'" class="btn btn-primary">
+          <button id="exploreRecipesBtn" class="btn btn-primary">
             <i class="fas fa-utensils"></i> Explore Recipes
           </button>
-          <button onclick="window.location.href='planner.html'" class="btn btn-primary">
+          <button id="planMealsBtn" class="btn btn-primary">
             <i class="fas fa-calendar-alt"></i> Plan Your Meals
           </button>
         </div>
@@ -346,24 +346,7 @@
     </div>
   </div>
 
-
-  <script>
-    // Update copyright year
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-    // Update last modified date
-    document.getElementById('lastModified').textContent = document.lastModified;
-
-    // Make showFavoritesModal globally available
-    window.showFavoritesModal = function () {
-      const favoritesModal = document.getElementById('favoritesModal');
-      if (favoritesModal) {
-        favoritesModal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-        loadFavorites();
-      }
-    };
-  </script>
+  <script src="scripts/utils.js"></script>
   <script src="scripts/index.js"></script>
   <script src="scripts/contact-form.js"></script>
   <script src="scripts/hamburger-menu.js"></script>
