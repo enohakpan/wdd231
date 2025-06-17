@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         card.style.animationDelay = `${index * 0.1}s`;
         
         card.innerHTML = `
-          <img src="${recipe.image}" alt="${recipe.name}" />
+          <img src="${recipe.image}" alt="${recipe.name}" loading="lazy" onerror="this.src='images/recipes/jollof-rice.webp';">
           <h3>${recipe.name}</h3>
         `;
         

@@ -179,45 +179,26 @@ document.addEventListener("DOMContentLoaded", () => {
     resultsContainer.innerHTML = '';
 
     if (recipes.length === 0) {
-      resultsContainer.innerHTML = '<p class="no-results">No recipes found. Try another search term.</p>';
+      resultsContainer.innerHTML = '<p class="no-results">No recipes found. Try a different search term.</p>';
       return;
     }
 
-    // Calculate pagination
-    const totalPages = Math.ceil(recipes.length / recipesPerPage);
-    const startIndex = (currentPage - 1) * recipesPerPage;
-    const endIndex = Math.min(startIndex + recipesPerPage, recipes.length);
-    const currentRecipes = recipes.slice(startIndex, endIndex);
-    const favorites = getFavorites();
-
-    // Create recipe grid
     const recipeGrid = document.createElement('div');
     recipeGrid.className = 'recipe-grid';
 
-    currentRecipes.forEach((recipe, index) => {
+    recipes.forEach((recipe, index) => {
       const card = document.createElement('div');
       card.className = 'recipe-card';
       card.style.animationDelay = `${index * 0.1}s`;
 
-      // Check if recipe is in favorites
-      const isFavorite = favorites.includes(recipe.id);
-      const favoriteClass = isFavorite ? 'favorite active' : 'favorite';
-      const favoriteIcon = isFavorite ? '❤️' : '🤍';
-
       card.innerHTML = `
-        <div class="${favoriteClass}" data-id="${recipe.id}">${favoriteIcon}</div>
-        <img loading="lazy" src="${recipe.image}" alt="${recipe.name}" onerror="this.src='images/recipes/jollof-rice.webp';" />
+        <img src="${recipe.image}" alt="${recipe.name}" loading="lazy" onerror="this.src='images/recipes/jollof-rice.webp';">
         <h3>${recipe.name}</h3>
-        <div class="recipe-overlay">
-          <div class="recipe-details">
-            <h4>${recipe.name}</h4>
-            <p>${recipe.ingredients.length} ingredients</p>
-            <button class="view-recipe-btn">View Recipe</button>
-          </div>
-        </div>
+        <button class="favorite" data-id="${recipe.id}">🤍</button>
+        <button class="view-recipe-btn">View Recipe</button>
       `;
 
-      // Add favorite toggle functionality
+      // Add event listeners
       const favoriteBtn = card.querySelector('.favorite');
       favoriteBtn.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -248,46 +229,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     resultsContainer.appendChild(recipeGrid);
-
-    // Add pagination controls
-    if (totalPages > 1) {
-      const paginationControls = document.createElement('div');
-      paginationControls.className = 'pagination-controls';
-
-      // Previous button
-      if (currentPage > 1) {
-        const prevButton = document.createElement('button');
-        prevButton.className = 'pagination-btn prev-btn';
-        prevButton.textContent = 'Previous';
-        prevButton.addEventListener('click', () => {
-          currentPage--;
-          displayRecipes(recipes);
-          window.scrollTo(0, 0);
-        });
-        paginationControls.appendChild(prevButton);
-      }
-
-      // Page indicator
-      const pageIndicator = document.createElement('span');
-      pageIndicator.className = 'page-indicator';
-      pageIndicator.textContent = `Page ${currentPage} of ${totalPages}`;
-      paginationControls.appendChild(pageIndicator);
-
-      // Next button
-      if (currentPage < totalPages) {
-        const nextButton = document.createElement('button');
-        nextButton.className = 'pagination-btn next-btn';
-        nextButton.textContent = 'Next';
-        nextButton.addEventListener('click', () => {
-          currentPage++;
-          displayRecipes(recipes);
-          window.scrollTo(0, 0);
-        });
-        paginationControls.appendChild(nextButton);
-      }
-
-      resultsContainer.appendChild(paginationControls);
-    }
 
     // Add intersection observer for scroll animations
     if ('IntersectionObserver' in window) {
