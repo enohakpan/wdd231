@@ -334,28 +334,28 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
 
       document.body.appendChild(modal);
+    }
 
-      // Add event listeners for closing the modal
-      const closeBtn = modal.querySelector('.close-button');
-      closeBtn.addEventListener('click', () => {
+    // Add event listeners for closing the modal
+    const closeBtn = modal.querySelector('.close-button');
+    closeBtn.onclick = () => {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    };
+
+    window.onclick = (event) => {
+      if (event.target === modal) {
         modal.classList.add('hidden');
         document.body.style.overflow = '';
-      });
+      }
+    };
 
-      window.addEventListener('click', event => {
-        if (event.target === modal) {
-          modal.classList.add('hidden');
-          document.body.style.overflow = '';
-        }
-      });
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-          modal.classList.add('hidden');
-          document.body.style.overflow = '';
-        }
-      });
-    }
+    document.onkeydown = (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    };
 
     // Populate modal with recipe data
     document.getElementById('modalTitle').textContent = recipe.name;
@@ -374,6 +374,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Show modal
     modal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden'; // Prevent scrolling
+    document.body.style.overflow = 'hidden';
   }
 });
